@@ -1,0 +1,20 @@
+{
+  "name": "farm-timer",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "test": ""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/johngrib/farm-timer.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/johngrib/farm-timer/issues"
+  },
+  "homepage": "https://github.com/johngrib/farm-timer#readme",
+  "dependencies": {}
+}
