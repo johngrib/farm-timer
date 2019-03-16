@@ -1,5 +1,27 @@
+const template = `
+    <div>
+        <div v-for="item in timers">
+            <div class="col-md-4">
+                <div class="card mb-4 shadow-sm">
+                    <div class="card-body">
+                        <div class="d-flex justify-content-between align-items-center">
+                            <small class="text-muted">{{item.name}}</small>
+                            <small class="text-muted">{{(item.elapsed) | toTimeFormat}}</small>
+                            <div class="btn-group">
+                                <button v-if="item.on"
+                                    type="button" class="btn btn-danger" v-on:click="toggle(item)">Stop</button>
+                                <button v-else
+                                    type="button" class="btn btn-success" v-on:click="toggle(item)">Start</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+`
 Vue.component('timer-list', {
-    template: '#timer-template',
+    template,
     props: {
         timers: Array,
     },
@@ -29,7 +51,7 @@ Vue.component('timer-list', {
     }
 })
 
-var timers = [{
+let timers = [{
     name: '운동',
     on: false,
     save: 0,
@@ -43,9 +65,8 @@ var timers = [{
     elapsed: 0,
 }];
 
-// bootstrap the demo
-var demo = new Vue({
-    el: '#demo',
+new Vue({
+    el: '#my-timers',
     data: {
         timers
     }
