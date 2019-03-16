@@ -13,7 +13,7 @@
 		0407C738223A8E91009FDB5B /* FarmTimer.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0407C736223A8E91009FDB5B /* FarmTimer.xcdatamodeld */; };
 		0407C73A223A8E92009FDB5B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0407C739223A8E92009FDB5B /* Assets.xcassets */; };
 		0407C73D223A8E92009FDB5B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0407C73B223A8E92009FDB5B /* LaunchScreen.storyboard */; };
-		0407C748223A8E92009FDB5B /* FarmTimerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0407C747223A8E92009FDB5B /* FarmTimerTests.swift */; };
+		0407C748223A8E92009FDB5B /* TimerServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0407C747223A8E92009FDB5B /* TimerServiceTests.swift */; };
 		0407C753223A8E92009FDB5B /* FarmTimerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0407C752223A8E92009FDB5B /* FarmTimerUITests.swift */; };
 /* End PBXBuildFile section */
 
@@ -44,7 +44,7 @@
 		0407C73C223A8E92009FDB5B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0407C73E223A8E92009FDB5B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0407C743223A8E92009FDB5B /* FarmTimerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FarmTimerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		0407C747223A8E92009FDB5B /* FarmTimerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FarmTimerTests.swift; sourceTree = "<group>"; };
+		0407C747223A8E92009FDB5B /* TimerServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerServiceTests.swift; sourceTree = "<group>"; };
 		0407C749223A8E92009FDB5B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0407C74E223A8E92009FDB5B /* FarmTimerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FarmTimerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0407C752223A8E92009FDB5B /* FarmTimerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FarmTimerUITests.swift; sourceTree = "<group>"; };
@@ -113,7 +113,7 @@
 		0407C746223A8E92009FDB5B /* FarmTimerTests */ = {
 			isa = PBXGroup;
 			children = (
-				0407C747223A8E92009FDB5B /* FarmTimerTests.swift */,
+				0407C747223A8E92009FDB5B /* TimerServiceTests.swift */,
 				0407C749223A8E92009FDB5B /* Info.plist */,
 			);
 			path = FarmTimerTests;
@@ -272,7 +272,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0407C748223A8E92009FDB5B /* FarmTimerTests.swift in Sources */,
+				0407C748223A8E92009FDB5B /* TimerServiceTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
