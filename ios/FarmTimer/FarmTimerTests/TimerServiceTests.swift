@@ -67,3 +67,30 @@ extension TimerProcessable where Self: TimerContainable {
     }
     
 }
+
+class MockTimerService {
+    
+    var time: TimeInterval = 0
+    
+    var timer: DispatchSourceTimer?
+    lazy var timerState: TimerState = .empty
+    
+}
+
+extension MockTimerService: TimeIntervalContainable {}
+extension MockTimerService: TimerContainable {}
+extension MockTimerService: TimerProcessable {
+    
+    func start() {
+        
+    }
+    
+    func pause() {
+        
+    }
+    
+    func clear() {
+        
+    }
+    
+}
