@@ -15,6 +15,14 @@
 		0407C73D223A8E92009FDB5B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0407C73B223A8E92009FDB5B /* LaunchScreen.storyboard */; };
 		0407C748223A8E92009FDB5B /* TimerServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0407C747223A8E92009FDB5B /* TimerServiceTests.swift */; };
 		0407C753223A8E92009FDB5B /* FarmTimerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0407C752223A8E92009FDB5B /* FarmTimerUITests.swift */; };
+		0409145F223D3A1C0036393A /* TestUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0409145E223D3A1C0036393A /* TestUtil.swift */; };
+		045001B7223D490900DEE484 /* TimeContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045001B6223D490900DEE484 /* TimeContainer.swift */; };
+		045001B9223D491300DEE484 /* TimerState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045001B8223D491300DEE484 /* TimerState.swift */; };
+		045001BB223D491F00DEE484 /* TimerContainable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045001BA223D491F00DEE484 /* TimerContainable.swift */; };
+		045001BD223D492B00DEE484 /* TimerProcessable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045001BC223D492B00DEE484 /* TimerProcessable.swift */; };
+		045001BF223D493700DEE484 /* TimerEventHandlable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045001BE223D493700DEE484 /* TimerEventHandlable.swift */; };
+		045001C1223D494800DEE484 /* TimerServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045001C0223D494800DEE484 /* TimerServiceProtocol.swift */; };
+		045001C3223D498A00DEE484 /* TimerService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045001C2223D498A00DEE484 /* TimerService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +57,14 @@
 		0407C74E223A8E92009FDB5B /* FarmTimerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FarmTimerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0407C752223A8E92009FDB5B /* FarmTimerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FarmTimerUITests.swift; sourceTree = "<group>"; };
 		0407C754223A8E92009FDB5B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0409145E223D3A1C0036393A /* TestUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestUtil.swift; sourceTree = "<group>"; };
+		045001B6223D490900DEE484 /* TimeContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeContainer.swift; sourceTree = "<group>"; };
+		045001B8223D491300DEE484 /* TimerState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerState.swift; sourceTree = "<group>"; };
+		045001BA223D491F00DEE484 /* TimerContainable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerContainable.swift; sourceTree = "<group>"; };
+		045001BC223D492B00DEE484 /* TimerProcessable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerProcessable.swift; sourceTree = "<group>"; };
+		045001BE223D493700DEE484 /* TimerEventHandlable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerEventHandlable.swift; sourceTree = "<group>"; };
+		045001C0223D494800DEE484 /* TimerServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerServiceProtocol.swift; sourceTree = "<group>"; };
+		045001C2223D498A00DEE484 /* TimerService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +115,7 @@
 		0407C72E223A8E90009FDB5B /* FarmTimer */ = {
 			isa = PBXGroup;
 			children = (
+				045001B4223D48EF00DEE484 /* Service */,
 				0407C72F223A8E90009FDB5B /* AppDelegate.swift */,
 				0407C731223A8E91009FDB5B /* ViewController.swift */,
 				0407C733223A8E91009FDB5B /* Main.storyboard */,
@@ -113,6 +130,7 @@
 		0407C746223A8E92009FDB5B /* FarmTimerTests */ = {
 			isa = PBXGroup;
 			children = (
+				0409145E223D3A1C0036393A /* TestUtil.swift */,
 				0407C747223A8E92009FDB5B /* TimerServiceTests.swift */,
 				0407C749223A8E92009FDB5B /* Info.plist */,
 			);
@@ -126,6 +144,28 @@
 				0407C754223A8E92009FDB5B /* Info.plist */,
 			);
 			path = FarmTimerUITests;
+			sourceTree = "<group>";
+		};
+		045001B4223D48EF00DEE484 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				045001B5223D48F300DEE484 /* Timer */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		045001B5223D48F300DEE484 /* Timer */ = {
+			isa = PBXGroup;
+			children = (
+				045001B6223D490900DEE484 /* TimeContainer.swift */,
+				045001B8223D491300DEE484 /* TimerState.swift */,
+				045001BA223D491F00DEE484 /* TimerContainable.swift */,
+				045001BC223D492B00DEE484 /* TimerProcessable.swift */,
+				045001BE223D493700DEE484 /* TimerEventHandlable.swift */,
+				045001C0223D494800DEE484 /* TimerServiceProtocol.swift */,
+				045001C2223D498A00DEE484 /* TimerService.swift */,
+			);
+			path = Timer;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -262,9 +302,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				045001BD223D492B00DEE484 /* TimerProcessable.swift in Sources */,
+				045001B7223D490900DEE484 /* TimeContainer.swift in Sources */,
+				045001B9223D491300DEE484 /* TimerState.swift in Sources */,
+				045001C1223D494800DEE484 /* TimerServiceProtocol.swift in Sources */,
+				045001BB223D491F00DEE484 /* TimerContainable.swift in Sources */,
 				0407C732223A8E91009FDB5B /* ViewController.swift in Sources */,
 				0407C730223A8E90009FDB5B /* AppDelegate.swift in Sources */,
 				0407C738223A8E91009FDB5B /* FarmTimer.xcdatamodeld in Sources */,
+				045001BF223D493700DEE484 /* TimerEventHandlable.swift in Sources */,
+				045001C3223D498A00DEE484 /* TimerService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -273,6 +320,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0407C748223A8E92009FDB5B /* TimerServiceTests.swift in Sources */,
+				0409145F223D3A1C0036393A /* TestUtil.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

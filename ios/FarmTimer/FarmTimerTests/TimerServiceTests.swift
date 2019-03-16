@@ -11,84 +11,77 @@ import XCTest
 
 class TimerServiceTests: XCTestCase {
     
+    var timerTicked: Bool = false
     var timerService: TimerServiceProtocol?
     
     override func setUp() {
-        timerService = MockTimerService()
+        
+        continueAfterFailure = false
+        
+        timerTicked = false
+        timerService = MockTimerService(repeating: 1.0, time: .zero, timer: nil, state: .empty)
     }
 
     func testTimerService() {
         
+        XCTAssertNil(timerService?.timer)
+        XCTAssertEqual(timerService?.state, .empty)
+        XCTAssertEqual(timerService?.time.value, 0.0)
+        
+        timerService = timerService?.started()
+        XCTAssertNotNil(timerService?.timer)
+        XCTAssertEqual(timerService?.state, .started)
+        
+        self.timerService?.setTickHandler { service in
+            XCTAssertEqual(service.state, .started)
+        }
+        self.timerService?.doTick()
+        XCTAssertEqual(timerService?.time.value, 1.0)
+        
+        timerService = timerService?.paused()
+        XCTAssertEqual(timerService?.state, .paused)
+        XCTAssertEqual(timerService?.time.value, 1.0)
+        
+        timerService = timerService?.cleared()
+        XCTAssertEqual(timerService?.state, .empty)
+        XCTAssertNil(timerService?.timer)
+        XCTAssertEqual(timerService?.time.value, 0)
     }
     
 }
 
-protocol TimeIntervalContainable {
+class MockTimerService: TimerServiceProtocol {
     
-    var time: TimeInterval { get }
-    
-}
-
-enum TimerState {
-    
-    case empty // 타이머를 생성하지 않은 상태
-    case started // 타이머를 실행한 상태
-    case paused // 타이머를 정지한 상태
-    
-}
-
-protocol TimerContainable {
-    
-    var timer: DispatchSourceTimer? { get }
-    var timerState: TimerState { get }
-    
-}
-
-protocol TimerProcessable {
-    
-    /// 타이머를 실행합니다. 타이머를 생성하기 전이라면 타이머를 생성하고, 정지한 상태라면 다시 실행하고, 이미 실행한 상태라면 아무런 작업을 하지 않습니다.
-    func start()
-    
-    /// 타이머를 멈춥니다. 이미 멈춘 상태라면 무시합니다.
-    func pause()
-    
-    /// 타이머를 정지하고, 타이머 인스턴스를 메모리에서 제거합니다. 이미 정지한 상태라면 제거만 합니다.
-    func clear()
-    
-}
-
-extension TimerProcessable where Self: TimerContainable {
-    
-    /// 타이머를 생성하고 반환합니다.
-    func createTimer() -> DispatchSourceTimer {
-        return DispatchSource.makeTimerSource()
-    }
-    
-}
-
-protocol TimerServiceProtocol: TimeIntervalContainable, TimerContainable, TimerProcessable {}
-
-class MockTimerService {
-    
-    var time: TimeInterval = 0
-    
+    let repeating: TimeInterval
+    let time: TimeContainer
     var timer: DispatchSourceTimer?
-    lazy var timerState: TimerState = .empty
+    let state: TimerState
     
-}
+    required init(repeating: TimeInterval, time: TimeContainer, timer: DispatchSourceTimer?, state: TimerState) {
+        self.repeating = repeating
+        self.time = time
+        self.timer = timer
+        self.state = state
+    }
+    
+    class TickHandlerContainer {
 
-extension MockTimerService: TimerServiceProtocol {
-    
-    func start() {
+        var tickHandler: ((TimerServiceProtocol) -> Void)?
         
     }
     
-    func pause() {
-        
+    var tickHandlerContainer: TickHandlerContainer = TickHandlerContainer()
+    
+//    deinit {
+//        timer?.resume()
+//    }
+    
+    func doTick() {
+        time.increment(with: repeating)
+        tickHandlerContainer.tickHandler?(self)
     }
     
-    func clear() {
-        
+    func setTickHandler(_ handler: @escaping (TimerServiceProtocol) -> Void) {
+        self.tickHandlerContainer.tickHandler = handler
     }
-    
 }
