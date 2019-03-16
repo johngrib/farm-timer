@@ -36,18 +36,30 @@
             </div>
         </header>
 
+    <!-- demo root element -->
+    <div id="demo">
+        <timer-list :timers="timers" ></timer-list>
+    </div>
         <main role="main">
             <div class="album py-5 bg-light">
                 <div class="container">
                     <div class="row">
-                        <div class="col-md-4">
-                            <div class="card mb-4 shadow-sm">
-                                <div class="card-body">
-                                    <div class="d-flex justify-content-between align-items-center">
-                                        <div class="btn-group">
-                                            <button type="button" class="btn btn-sm btn-outline-secondary">Start</button>
-                                        </div>
-                                        <small class="text-muted">0 mins</small>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <script type="text/x-template" id="timer-template">
+            <div>
+                <div v-for="item in timers">
+                    {{item}}
+                    <div class="col-md-4">
+                        <div class="card mb-4 shadow-sm">
+                            <div class="card-body">
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <small class="text-muted">{{item.start}}</small>
+                                    <small class="text-muted">{{item.elapsed | toTimeFormat}}</small>
+                                    <div class="btn-group">
+                                        <button type="button" class="btn btn-sm btn-outline-secondary">Start</button>
                                     </div>
                                 </div>
                             </div>
@@ -55,7 +67,11 @@
                     </div>
                 </div>
             </div>
-        </main>
-        <script async type="module" src="./js/main.js"></script>
+        </script>
+
+    </body>
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+    <script async type="module" src="./js/main.js"></script>
 </html>
+
 
