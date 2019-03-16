@@ -10,13 +10,11 @@ import XCTest
 @testable import FarmTimer
 
 class TimerServiceTests: XCTestCase {
-
+    
+    var timerService: TimerServiceProtocol?
+    
     override func setUp() {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
-    }
-
-    override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
+        timerService = MockTimerService()
     }
 
     func testTimerService() {
@@ -68,6 +66,8 @@ extension TimerProcessable where Self: TimerContainable {
     
 }
 
+protocol TimerServiceProtocol: TimeIntervalContainable, TimerContainable, TimerProcessable {}
+
 class MockTimerService {
     
     var time: TimeInterval = 0
@@ -77,9 +77,7 @@ class MockTimerService {
     
 }
 
-extension MockTimerService: TimeIntervalContainable {}
-extension MockTimerService: TimerContainable {}
-extension MockTimerService: TimerProcessable {
+extension MockTimerService: TimerServiceProtocol {
     
     func start() {
         
