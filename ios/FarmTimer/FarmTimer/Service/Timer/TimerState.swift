@@ -9,7 +9,7 @@
 import Foundation
 
 
-enum TimerState {
+enum TimerState: Hashable {
     
     case empty // 타이머를 생성하지 않은 상태
     case started // 타이머를 실행한 상태
