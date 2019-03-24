@@ -24,6 +24,7 @@ const template = `
 `;
 
 const TIMER_KEY = 'farm-timer-timers';
+const HISTORY_KEY = 'farm-timer-history';
 
 Vue.component('timer-list', {
     template,
@@ -62,25 +63,53 @@ Vue.component('timer-list', {
             state.started = new Date().getTime();
             state.elapsed = state.save;
             setData(TIMER_KEY, timers);
+            console.log(state)
         },
         stop: function(state) {
             console.log('stop pressed')
             state.save += new Date().getTime() - state.started;
             console.log(state.started);
             setData(TIMER_KEY, timers);
+            console.log(state)
+            saveHistory(state);
         },
     }
 })
 
 let timers;
+let history;
+
+function saveHistory(state) {
+    const date = state.date;
+    history[state.date][state.name] = state.save
+
+    console.log('state', state);
+    console.log('history', history);
+}
 
 (function main() {
     const data = localStorage.getItem(TIMER_KEY);
-    if (!data || !/^\[\{.*\}\]$/.test(data)) {
+    console.log(data);
+    if (!isValidJSONArrayString(data)) {
         initStorage();
     }
     timers = getData(TIMER_KEY);
+
+    const hist = localStorage.getItem(HISTORY_KEY);
+    console.log(HISTORY_KEY, hist);
+    if (!isValidJSONString(hist)) {
+        initHistory();
+    }
+    history = getData(HISTORY_KEY);
 })();
+
+function isValidJSONArrayString(str) {
+    return (typeof str === 'string') && /^\[\{.*\}\]$/.test(str);
+}
+
+function isValidJSONString(str) {
+    return (typeof str === 'string') && /^\[\{.*\}\]$/.test(str);
+}
 
 function initStorage() {
     let timers = [{
@@ -89,14 +118,30 @@ function initStorage() {
         save: 0,
         started: 0,
         elapsed: 0,
+        date: getToday(),
     }, {
         name: '공부',
         on: false,
         save: 0,
         started: 0,
         elapsed: 0,
+        date: getToday(),
     }];
     setData(TIMER_KEY, timers);
+}
+
+function initHistory() {
+    const hist = {};
+    hist[getToday()] = {};
+    setData(HISTORY_KEY, hist);
+}
+
+function getToday() {
+    return getDateStarted(new Date());
+}
+
+function getDateStarted(dateObj) {
+    return new Date(dateObj.toLocaleDateString()).getTime();
 }
 
 function setData(key, obj) {
