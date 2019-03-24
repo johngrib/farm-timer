@@ -14,7 +14,6 @@
 		0407C73A223A8E92009FDB5B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0407C739223A8E92009FDB5B /* Assets.xcassets */; };
 		0407C73D223A8E92009FDB5B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0407C73B223A8E92009FDB5B /* LaunchScreen.storyboard */; };
 		0407C748223A8E92009FDB5B /* TimerServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0407C747223A8E92009FDB5B /* TimerServiceTests.swift */; };
-		0407C753223A8E92009FDB5B /* FarmTimerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0407C752223A8E92009FDB5B /* FarmTimerUITests.swift */; };
 		0409145F223D3A1C0036393A /* TestUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0409145E223D3A1C0036393A /* TestUtil.swift */; };
 		040EC776223E8F1700073B90 /* TimerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040EC775223E8F1700073B90 /* TimerCell.swift */; };
 		040EC779223E910800073B90 /* TimerListModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040EC778223E910800073B90 /* TimerListModelTests.swift */; };
@@ -37,13 +36,6 @@
 			remoteGlobalIDString = 0407C72B223A8E90009FDB5B;
 			remoteInfo = FarmTimer;
 		};
-		0407C74F223A8E92009FDB5B /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 0407C724223A8E90009FDB5B /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 0407C72B223A8E90009FDB5B;
-			remoteInfo = FarmTimer;
-		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
@@ -58,9 +50,6 @@
 		0407C743223A8E92009FDB5B /* FarmTimerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FarmTimerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0407C747223A8E92009FDB5B /* TimerServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerServiceTests.swift; sourceTree = "<group>"; };
 		0407C749223A8E92009FDB5B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		0407C74E223A8E92009FDB5B /* FarmTimerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FarmTimerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		0407C752223A8E92009FDB5B /* FarmTimerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FarmTimerUITests.swift; sourceTree = "<group>"; };
-		0407C754223A8E92009FDB5B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0409145E223D3A1C0036393A /* TestUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestUtil.swift; sourceTree = "<group>"; };
 		040EC775223E8F1700073B90 /* TimerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerCell.swift; sourceTree = "<group>"; };
 		040EC778223E910800073B90 /* TimerListModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerListModelTests.swift; sourceTree = "<group>"; };
@@ -90,13 +79,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		0407C74B223A8E92009FDB5B /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -105,7 +87,6 @@
 			children = (
 				0407C72E223A8E90009FDB5B /* FarmTimer */,
 				0407C746223A8E92009FDB5B /* FarmTimerTests */,
-				0407C751223A8E92009FDB5B /* FarmTimerUITests */,
 				0407C72D223A8E90009FDB5B /* Products */,
 			);
 			sourceTree = "<group>";
@@ -115,7 +96,6 @@
 			children = (
 				0407C72C223A8E90009FDB5B /* FarmTimer.app */,
 				0407C743223A8E92009FDB5B /* FarmTimerTests.xctest */,
-				0407C74E223A8E92009FDB5B /* FarmTimerUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -145,15 +125,6 @@
 				0407C749223A8E92009FDB5B /* Info.plist */,
 			);
 			path = FarmTimerTests;
-			sourceTree = "<group>";
-		};
-		0407C751223A8E92009FDB5B /* FarmTimerUITests */ = {
-			isa = PBXGroup;
-			children = (
-				0407C752223A8E92009FDB5B /* FarmTimerUITests.swift */,
-				0407C754223A8E92009FDB5B /* Info.plist */,
-			);
-			path = FarmTimerUITests;
 			sourceTree = "<group>";
 		};
 		040EC772223E8E1300073B90 /* View */ = {
@@ -258,24 +229,6 @@
 			productReference = 0407C743223A8E92009FDB5B /* FarmTimerTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		0407C74D223A8E92009FDB5B /* FarmTimerUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 0407C75D223A8E92009FDB5B /* Build configuration list for PBXNativeTarget "FarmTimerUITests" */;
-			buildPhases = (
-				0407C74A223A8E92009FDB5B /* Sources */,
-				0407C74B223A8E92009FDB5B /* Frameworks */,
-				0407C74C223A8E92009FDB5B /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				0407C750223A8E92009FDB5B /* PBXTargetDependency */,
-			);
-			name = FarmTimerUITests;
-			productName = FarmTimerUITests;
-			productReference = 0407C74E223A8E92009FDB5B /* FarmTimerUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -291,11 +244,6 @@
 						LastSwiftMigration = 1020;
 					};
 					0407C742223A8E92009FDB5B = {
-						CreatedOnToolsVersion = 10.1;
-						LastSwiftMigration = 1020;
-						TestTargetID = 0407C72B223A8E90009FDB5B;
-					};
-					0407C74D223A8E92009FDB5B = {
 						CreatedOnToolsVersion = 10.1;
 						LastSwiftMigration = 1020;
 						TestTargetID = 0407C72B223A8E90009FDB5B;
@@ -317,7 +265,6 @@
 			targets = (
 				0407C72B223A8E90009FDB5B /* FarmTimer */,
 				0407C742223A8E92009FDB5B /* FarmTimerTests */,
-				0407C74D223A8E92009FDB5B /* FarmTimerUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -334,13 +281,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		0407C741223A8E92009FDB5B /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		0407C74C223A8E92009FDB5B /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -380,14 +320,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		0407C74A223A8E92009FDB5B /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				0407C753223A8E92009FDB5B /* FarmTimerUITests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -395,11 +327,6 @@
 			isa = PBXTargetDependency;
 			target = 0407C72B223A8E90009FDB5B /* FarmTimer */;
 			targetProxy = 0407C744223A8E92009FDB5B /* PBXContainerItemProxy */;
-		};
-		0407C750223A8E92009FDB5B /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 0407C72B223A8E90009FDB5B /* FarmTimer */;
-			targetProxy = 0407C74F223A8E92009FDB5B /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -617,46 +544,6 @@
 			};
 			name = Release;
 		};
-		0407C75E223A8E92009FDB5B /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = HY47J4787Q;
-				INFOPLIST_FILE = FarmTimerUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.rollmind.FarmTimerUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = FarmTimer;
-			};
-			name = Debug;
-		};
-		0407C75F223A8E92009FDB5B /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = HY47J4787Q;
-				INFOPLIST_FILE = FarmTimerUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.rollmind.FarmTimerUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = FarmTimer;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -683,15 +570,6 @@
 			buildConfigurations = (
 				0407C75B223A8E92009FDB5B /* Debug */,
 				0407C75C223A8E92009FDB5B /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		0407C75D223A8E92009FDB5B /* Build configuration list for PBXNativeTarget "FarmTimerUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				0407C75E223A8E92009FDB5B /* Debug */,
-				0407C75F223A8E92009FDB5B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
