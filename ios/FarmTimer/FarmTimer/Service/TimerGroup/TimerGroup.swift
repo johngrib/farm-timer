@@ -10,4 +10,6 @@ import Foundation
 
 struct TimerGroup {
     
+    var items: [TimerItem] = []
+    
 }

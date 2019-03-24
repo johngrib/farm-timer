@@ -29,6 +29,8 @@
 		150385972247C2BB00AB03B0 /* TimerGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 150385962247C2BB00AB03B0 /* TimerGroup.swift */; };
 		150385992247C2DE00AB03B0 /* TimerGroupTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 150385982247C2DE00AB03B0 /* TimerGroupTests.swift */; };
 		1503859B2247C36300AB03B0 /* TimerGroupAddable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1503859A2247C36300AB03B0 /* TimerGroupAddable.swift */; };
+		1503859F2247CCDB00AB03B0 /* TimerGroupRemovable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1503859E2247CCDB00AB03B0 /* TimerGroupRemovable.swift */; };
+		150385A12247CF6900AB03B0 /* TimerGroupStateSwitchable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 150385A02247CF6900AB03B0 /* TimerGroupStateSwitchable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,6 +70,8 @@
 		150385962247C2BB00AB03B0 /* TimerGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerGroup.swift; sourceTree = "<group>"; };
 		150385982247C2DE00AB03B0 /* TimerGroupTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerGroupTests.swift; sourceTree = "<group>"; };
 		1503859A2247C36300AB03B0 /* TimerGroupAddable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerGroupAddable.swift; sourceTree = "<group>"; };
+		1503859E2247CCDB00AB03B0 /* TimerGroupRemovable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerGroupRemovable.swift; sourceTree = "<group>"; };
+		150385A02247CF6900AB03B0 /* TimerGroupStateSwitchable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerGroupStateSwitchable.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -203,7 +207,9 @@
 			isa = PBXGroup;
 			children = (
 				150385962247C2BB00AB03B0 /* TimerGroup.swift */,
+				150385A02247CF6900AB03B0 /* TimerGroupStateSwitchable.swift */,
 				1503859A2247C36300AB03B0 /* TimerGroupAddable.swift */,
+				1503859E2247CCDB00AB03B0 /* TimerGroupRemovable.swift */,
 			);
 			path = TimerGroup;
 			sourceTree = "<group>";
@@ -312,6 +318,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				045001BD223D492B00DEE484 /* TimerProcessable.swift in Sources */,
+				150385A12247CF6900AB03B0 /* TimerGroupStateSwitchable.swift in Sources */,
 				045001B7223D490900DEE484 /* TimeContainer.swift in Sources */,
 				045001B9223D491300DEE484 /* TimerState.swift in Sources */,
 				045001C1223D494800DEE484 /* TimerServiceProtocol.swift in Sources */,
@@ -324,6 +331,7 @@
 				040EC781223E91C800073B90 /* TimerListViewModel.swift in Sources */,
 				0407C730223A8E90009FDB5B /* AppDelegate.swift in Sources */,
 				0407C738223A8E91009FDB5B /* FarmTimer.xcdatamodeld in Sources */,
+				1503859F2247CCDB00AB03B0 /* TimerGroupRemovable.swift in Sources */,
 				045001BF223D493700DEE484 /* TimerEventHandlable.swift in Sources */,
 				045001C3223D498A00DEE484 /* TimerService.swift in Sources */,
 			);
