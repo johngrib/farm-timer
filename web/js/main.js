@@ -42,14 +42,10 @@ Vue.component('timer-list', {
             state.on = !state.on;
 
             if (state.on) {
-                console.log('start pressed')
-                state.started = new Date().getTime();
-                state.elapsed = state.save;
-            } else {
-                console.log('stop pressed')
-                state.save += new Date().getTime() - state.started;
+                this.start(state);
+                return;
             }
-            setData(TIMER_KEY, timers);
+            this.stop(state);
         },
         reset: function(state) {
             state.save = 0;
@@ -60,16 +56,31 @@ Vue.component('timer-list', {
         },
         getElapsed: function(state) {
             return new Date().getTime() - state.started + state.save;
-        }
+        },
+        start: function(state) {
+            console.log('start pressed')
+            state.started = new Date().getTime();
+            state.elapsed = state.save;
+            setData(TIMER_KEY, timers);
+        },
+        stop: function(state) {
+            console.log('stop pressed')
+            state.save += new Date().getTime() - state.started;
+            console.log(state.started);
+            setData(TIMER_KEY, timers);
+        },
     }
 })
 
 let timers;
 
-if (!localStorage.getItem(TIMER_KEY)) {
-    initStorage();
-}
-timers = getData(TIMER_KEY);
+(function main() {
+    const data = localStorage.getItem(TIMER_KEY);
+    if (!data || !/^\[\{.*\}\]$/.test(data)) {
+        initStorage();
+    }
+    timers = getData(TIMER_KEY);
+})();
 
 function initStorage() {
     let timers = [{
