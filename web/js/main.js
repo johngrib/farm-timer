@@ -74,10 +74,13 @@ Vue.component('timer-list', {
 
 let timers;
 
-if (!localStorage.getItem(TIMER_KEY)) {
-    initStorage();
-}
-timers = getData(TIMER_KEY);
+(function main() {
+    const data = localStorage.getItem(TIMER_KEY);
+    if (!data || !/^\[\{.*\}\]$/.test(data)) {
+        initStorage();
+    }
+    timers = getData(TIMER_KEY);
+})();
 
 function initStorage() {
     let timers = [{
