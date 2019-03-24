@@ -21,7 +21,10 @@ const template = `
             </div>
         </div>
     </div>
-`
+`;
+
+const TIMER_KEY = 'farm-timer-timers';
+
 Vue.component('timer-list', {
     template,
     props: {
@@ -46,12 +49,14 @@ Vue.component('timer-list', {
                 console.log('stop pressed')
                 state.save += new Date().getTime() - state.started;
             }
+            setData(TIMER_KEY, timers);
         },
         reset: function(state) {
             state.save = 0;
             state.started = 0;
             state.elapsed = 0;
             state.on = false;
+            setData(TIMER_KEY, timers);
         },
         getElapsed: function(state) {
             return new Date().getTime() - state.started + state.save;
@@ -59,19 +64,37 @@ Vue.component('timer-list', {
     }
 })
 
-let timers = [{
-    name: '운동',
-    on: false,
-    save: 0,
-    started: 0,
-    elapsed: 0,
-}, {
-    name: '공부',
-    on: false,
-    save: 0,
-    started: 0,
-    elapsed: 0,
-}];
+let timers;
+
+if (!localStorage.getItem(TIMER_KEY)) {
+    initStorage();
+}
+timers = getData(TIMER_KEY);
+
+function initStorage() {
+    let timers = [{
+        name: '운동',
+        on: false,
+        save: 0,
+        started: 0,
+        elapsed: 0,
+    }, {
+        name: '공부',
+        on: false,
+        save: 0,
+        started: 0,
+        elapsed: 0,
+    }];
+    setData(TIMER_KEY, timers);
+}
+
+function setData(key, obj) {
+    localStorage.setItem(key, JSON.stringify(obj));
+}
+
+function getData(key) {
+    return JSON.parse(localStorage.getItem(key));
+}
 
 new Vue({
     el: '#my-timers',
