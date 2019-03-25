@@ -16,12 +16,32 @@ class TimerListController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        setupUI()
+        
         setupTableViewDelegate()
         setupTableViewDataSource()
+        
         bindTimerListViewModel()
     }
     
-    func setupUI() {
+}
+
+// MARK: - UI setup
+
+extension TimerListController {
+    
+    private func setupUI() {
+        setupNavigationItem()
+        setupTableView()
+    }
+    
+    private func setupTableView() {
         tableView.tableFooterView = UIView()
+    }
+    
+    private func setupNavigationItem() {
+        let addItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(TimerListController.clickAddItem(_:)))
+        
+        navigationItem.rightBarButtonItem = addItem
     }
 }

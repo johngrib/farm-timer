@@ -14,6 +14,10 @@ extension TimerListController: TimerListViewModelDelegate {
         self.listViewModel.delegate = self
     }
     
+    @objc func clickAddItem(_ sender: Any) {
+        
+    }
+    
     func listViewAdded(_ model: TimerListViewModel) {
         tableView.reloadData()
     }

@@ -33,7 +33,7 @@
 		150385A12247CF6900AB03B0 /* TimerGroupStateSwitchable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 150385A02247CF6900AB03B0 /* TimerGroupStateSwitchable.swift */; };
 		15F64466224907CE007EA019 /* TimerListController+UITableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15F64465224907CE007EA019 /* TimerListController+UITableViewDataSource.swift */; };
 		15F64468224907F0007EA019 /* TimerListController+UITableViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15F64467224907F0007EA019 /* TimerListController+UITableViewDelegate.swift */; };
-		15F6446A22490808007EA019 /* TimerListController+TimerListViewModelDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15F6446922490808007EA019 /* TimerListController+TimerListViewModelDelegate.swift */; };
+		15F6446A22490808007EA019 /* TimerListController+TimerListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15F6446922490808007EA019 /* TimerListController+TimerListViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -77,7 +77,7 @@
 		150385A02247CF6900AB03B0 /* TimerGroupStateSwitchable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerGroupStateSwitchable.swift; sourceTree = "<group>"; };
 		15F64465224907CE007EA019 /* TimerListController+UITableViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TimerListController+UITableViewDataSource.swift"; sourceTree = "<group>"; };
 		15F64467224907F0007EA019 /* TimerListController+UITableViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TimerListController+UITableViewDelegate.swift"; sourceTree = "<group>"; };
-		15F6446922490808007EA019 /* TimerListController+TimerListViewModelDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TimerListController+TimerListViewModelDelegate.swift"; sourceTree = "<group>"; };
+		15F6446922490808007EA019 /* TimerListController+TimerListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TimerListController+TimerListViewModel.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -157,7 +157,7 @@
 			children = (
 				040EC77F223E91C000073B90 /* ViewModel */,
 				0407C731223A8E91009FDB5B /* TimerListController.swift */,
-				15F6446922490808007EA019 /* TimerListController+TimerListViewModelDelegate.swift */,
+				15F6446922490808007EA019 /* TimerListController+TimerListViewModel.swift */,
 				15F64467224907F0007EA019 /* TimerListController+UITableViewDelegate.swift */,
 				15F64465224907CE007EA019 /* TimerListController+UITableViewDataSource.swift */,
 				040EC775223E8F1700073B90 /* TimerCell.swift */,
@@ -331,7 +331,7 @@
 				150385A12247CF6900AB03B0 /* TimerGroupStateSwitchable.swift in Sources */,
 				045001B7223D490900DEE484 /* TimeContainer.swift in Sources */,
 				045001B9223D491300DEE484 /* TimerState.swift in Sources */,
-				15F6446A22490808007EA019 /* TimerListController+TimerListViewModelDelegate.swift in Sources */,
+				15F6446A22490808007EA019 /* TimerListController+TimerListViewModel.swift in Sources */,
 				045001C1223D494800DEE484 /* TimerServiceProtocol.swift in Sources */,
 				040EC776223E8F1700073B90 /* TimerCell.swift in Sources */,
 				045001BB223D491F00DEE484 /* TimerContainable.swift in Sources */,
