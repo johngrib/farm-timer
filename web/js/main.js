@@ -24,6 +24,8 @@ const template = `
 `;
 
 const TIMER_KEY = 'farm-timer-timers';
+const HISTORY_KEY = 'farm-timer-history';
+const LOG_KEY = 'farm-timer-log';
 
 Vue.component('timer-list', {
     template,
@@ -32,10 +34,7 @@ Vue.component('timer-list', {
     },
     computed: {},
     filters: {
-        toTimeFormat: function(timestamp) {
-            const time = new Date(timestamp);
-            return time.getUTCHours() + ':' + time.getUTCMinutes() + ':' + time.getUTCSeconds();
-        }
+        toTimeFormat
     },
     methods: {
         toggle: function(state) {
@@ -62,25 +61,109 @@ Vue.component('timer-list', {
             state.started = new Date().getTime();
             state.elapsed = state.save;
             setData(TIMER_KEY, timers);
+            console.log(state)
         },
         stop: function(state) {
             console.log('stop pressed')
-            state.save += new Date().getTime() - state.started;
+
+            const now = new Date().getTime();
+
+            state.end = now;
+            state.save += now - state.started;
+
             console.log(state.started);
+
             setData(TIMER_KEY, timers);
+            console.log(state)
+            saveLog(state);
+            saveHistory(state);
         },
     }
 })
 
 let timers;
+let history;
+let log;
+
+function toTimeFormat(timestamp) {
+    const time = new Date(timestamp);
+    return time.getUTCHours() + ':' + time.getUTCMinutes() + ':' + time.getUTCSeconds();
+}
+
+function saveLog(state) {
+    let activity = log[state.name];
+
+    if (!activity) {
+        activity = [];
+    }
+    activity.push({
+        date: state.date,
+        started: state.started,
+        end: state.end
+    });
+
+    log[state.name] = activity;
+    setData(LOG_KEY, log);
+}
+
+function saveHistory(state) {
+
+    const today = getToday();
+
+    const activity = log[state.name].sort(function(s1, s2) {
+        return s1.date - s1.date;
+    }).reduce(function(data, curr) {
+        if (!data[curr.date]) {
+            data[curr.date] = {
+                date: curr.date,
+                dateStr: new Date(curr.date).toLocaleDateString(),
+                elapsed: 0,
+            };
+        }
+        const h = data[curr.date];
+        h.elapsed += curr.end - curr.started;
+        return data;
+    }, {});
+
+    console.log(activity);
+
+    history[state.name] = activity;
+
+    setData(HISTORY_KEY, history);
+
+    window.hh = history;
+}
 
 (function main() {
     const data = localStorage.getItem(TIMER_KEY);
-    if (!data || !/^\[\{.*\}\]$/.test(data)) {
+    console.log(data);
+    if (!isValidJSONArrayString(data)) {
         initStorage();
     }
     timers = getData(TIMER_KEY);
+
+    const hist = localStorage.getItem(HISTORY_KEY);
+    console.log(HISTORY_KEY, hist);
+    if (!isValidJSONString(hist)) {
+        initHistory();
+    }
+    history = getData(HISTORY_KEY);
+
+    const logData = localStorage.getItem(LOG_KEY);
+    console.log(LOG_KEY, logData);
+    if (!isValidJSONString(logData)) {
+        initLog();
+    }
+    log = getData(LOG_KEY);
 })();
+
+function isValidJSONArrayString(str) {
+    return (typeof str === 'string') && /^\[\{.*\}\]$/.test(str);
+}
+
+function isValidJSONString(str) {
+    return (typeof str === 'string') && /^\{.*\}$/.test(str);
+}
 
 function initStorage() {
     let timers = [{
@@ -89,14 +172,32 @@ function initStorage() {
         save: 0,
         started: 0,
         elapsed: 0,
+        date: getToday(),
     }, {
         name: '공부',
         on: false,
         save: 0,
         started: 0,
         elapsed: 0,
+        date: getToday(),
     }];
     setData(TIMER_KEY, timers);
+}
+
+function initHistory() {
+    setData(HISTORY_KEY, {});
+}
+
+function initLog() {
+    setData(LOG_KEY, {});
+}
+
+function getToday() {
+    return getDateStarted(new Date());
+}
+
+function getDateStarted(dateObj) {
+    return new Date(dateObj.toLocaleDateString()).getTime();
 }
 
 function setData(key, obj) {
