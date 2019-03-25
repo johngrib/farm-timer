@@ -11,8 +11,11 @@ import UIKit
 class TimerListViewModel {
     
     weak var delegate: TimerListViewModelDelegate?
+    private(set) lazy var timerGroup: TimerGroup = TimerGroup()
     
-    private(set) var items: [TimerItem] = []
+    var items: [TimerItem] {
+        return timerGroup.items
+    }
     
 }
 
@@ -52,7 +55,7 @@ protocol TimerListAddable {
 extension TimerListViewModel: TimerListAddable {
     
     func add(_ item: TimerItem) {
-        self.items.append(item)
+        timerGroup.add(item: item)
         delegate?.listViewAdded(self)
     }
     
