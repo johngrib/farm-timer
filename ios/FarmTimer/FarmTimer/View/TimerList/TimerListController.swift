@@ -21,16 +21,8 @@ class TimerListController: UIViewController {
         tableView.delegate = self
         tableView.dataSource = self
         listViewModel.delegate = self
-        
-        setupSampleData()
     }
     
-    func setupSampleData() {
-        listViewModel.add(TimerItem(title: "운동", time: 0, state: .empty))
-        listViewModel.add(TimerItem(title: "휴식", time: 0, state: .empty))
-    }
-
-
 }
 
 extension TimerListController: UITableViewDataSource {
