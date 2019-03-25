@@ -14,7 +14,6 @@
 		0407C73A223A8E92009FDB5B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0407C739223A8E92009FDB5B /* Assets.xcassets */; };
 		0407C73D223A8E92009FDB5B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0407C73B223A8E92009FDB5B /* LaunchScreen.storyboard */; };
 		0407C748223A8E92009FDB5B /* TimerServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0407C747223A8E92009FDB5B /* TimerServiceTests.swift */; };
-		0407C753223A8E92009FDB5B /* FarmTimerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0407C752223A8E92009FDB5B /* FarmTimerUITests.swift */; };
 		0409145F223D3A1C0036393A /* TestUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0409145E223D3A1C0036393A /* TestUtil.swift */; };
 		040EC776223E8F1700073B90 /* TimerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040EC775223E8F1700073B90 /* TimerCell.swift */; };
 		040EC779223E910800073B90 /* TimerListModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040EC778223E910800073B90 /* TimerListModelTests.swift */; };
@@ -27,17 +26,15 @@
 		045001BF223D493700DEE484 /* TimerEventHandlable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045001BE223D493700DEE484 /* TimerEventHandlable.swift */; };
 		045001C1223D494800DEE484 /* TimerServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045001C0223D494800DEE484 /* TimerServiceProtocol.swift */; };
 		045001C3223D498A00DEE484 /* TimerService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045001C2223D498A00DEE484 /* TimerService.swift */; };
+		150385972247C2BB00AB03B0 /* TimerGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 150385962247C2BB00AB03B0 /* TimerGroup.swift */; };
+		150385992247C2DE00AB03B0 /* TimerGroupTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 150385982247C2DE00AB03B0 /* TimerGroupTests.swift */; };
+		1503859B2247C36300AB03B0 /* TimerGroupAddable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1503859A2247C36300AB03B0 /* TimerGroupAddable.swift */; };
+		1503859F2247CCDB00AB03B0 /* TimerGroupRemovable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1503859E2247CCDB00AB03B0 /* TimerGroupRemovable.swift */; };
+		150385A12247CF6900AB03B0 /* TimerGroupStateSwitchable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 150385A02247CF6900AB03B0 /* TimerGroupStateSwitchable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
 		0407C744223A8E92009FDB5B /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 0407C724223A8E90009FDB5B /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 0407C72B223A8E90009FDB5B;
-			remoteInfo = FarmTimer;
-		};
-		0407C74F223A8E92009FDB5B /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 0407C724223A8E90009FDB5B /* Project object */;
 			proxyType = 1;
@@ -58,9 +55,6 @@
 		0407C743223A8E92009FDB5B /* FarmTimerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FarmTimerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0407C747223A8E92009FDB5B /* TimerServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerServiceTests.swift; sourceTree = "<group>"; };
 		0407C749223A8E92009FDB5B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		0407C74E223A8E92009FDB5B /* FarmTimerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FarmTimerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		0407C752223A8E92009FDB5B /* FarmTimerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FarmTimerUITests.swift; sourceTree = "<group>"; };
-		0407C754223A8E92009FDB5B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0409145E223D3A1C0036393A /* TestUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestUtil.swift; sourceTree = "<group>"; };
 		040EC775223E8F1700073B90 /* TimerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerCell.swift; sourceTree = "<group>"; };
 		040EC778223E910800073B90 /* TimerListModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerListModelTests.swift; sourceTree = "<group>"; };
@@ -73,6 +67,11 @@
 		045001BE223D493700DEE484 /* TimerEventHandlable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerEventHandlable.swift; sourceTree = "<group>"; };
 		045001C0223D494800DEE484 /* TimerServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerServiceProtocol.swift; sourceTree = "<group>"; };
 		045001C2223D498A00DEE484 /* TimerService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerService.swift; sourceTree = "<group>"; };
+		150385962247C2BB00AB03B0 /* TimerGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerGroup.swift; sourceTree = "<group>"; };
+		150385982247C2DE00AB03B0 /* TimerGroupTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerGroupTests.swift; sourceTree = "<group>"; };
+		1503859A2247C36300AB03B0 /* TimerGroupAddable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerGroupAddable.swift; sourceTree = "<group>"; };
+		1503859E2247CCDB00AB03B0 /* TimerGroupRemovable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerGroupRemovable.swift; sourceTree = "<group>"; };
+		150385A02247CF6900AB03B0 /* TimerGroupStateSwitchable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerGroupStateSwitchable.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,13 +89,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		0407C74B223A8E92009FDB5B /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -105,7 +97,6 @@
 			children = (
 				0407C72E223A8E90009FDB5B /* FarmTimer */,
 				0407C746223A8E92009FDB5B /* FarmTimerTests */,
-				0407C751223A8E92009FDB5B /* FarmTimerUITests */,
 				0407C72D223A8E90009FDB5B /* Products */,
 			);
 			sourceTree = "<group>";
@@ -115,7 +106,6 @@
 			children = (
 				0407C72C223A8E90009FDB5B /* FarmTimer.app */,
 				0407C743223A8E92009FDB5B /* FarmTimerTests.xctest */,
-				0407C74E223A8E92009FDB5B /* FarmTimerUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -142,18 +132,10 @@
 				0409145E223D3A1C0036393A /* TestUtil.swift */,
 				040EC778223E910800073B90 /* TimerListModelTests.swift */,
 				0407C747223A8E92009FDB5B /* TimerServiceTests.swift */,
+				150385982247C2DE00AB03B0 /* TimerGroupTests.swift */,
 				0407C749223A8E92009FDB5B /* Info.plist */,
 			);
 			path = FarmTimerTests;
-			sourceTree = "<group>";
-		};
-		0407C751223A8E92009FDB5B /* FarmTimerUITests */ = {
-			isa = PBXGroup;
-			children = (
-				0407C752223A8E92009FDB5B /* FarmTimerUITests.swift */,
-				0407C754223A8E92009FDB5B /* Info.plist */,
-			);
-			path = FarmTimerUITests;
 			sourceTree = "<group>";
 		};
 		040EC772223E8E1300073B90 /* View */ = {
@@ -201,6 +183,7 @@
 		045001B4223D48EF00DEE484 /* Service */ = {
 			isa = PBXGroup;
 			children = (
+				150385952247C2AE00AB03B0 /* TimerGroup */,
 				045001B5223D48F300DEE484 /* Timer */,
 			);
 			path = Service;
@@ -218,6 +201,17 @@
 				045001C2223D498A00DEE484 /* TimerService.swift */,
 			);
 			path = Timer;
+			sourceTree = "<group>";
+		};
+		150385952247C2AE00AB03B0 /* TimerGroup */ = {
+			isa = PBXGroup;
+			children = (
+				150385962247C2BB00AB03B0 /* TimerGroup.swift */,
+				150385A02247CF6900AB03B0 /* TimerGroupStateSwitchable.swift */,
+				1503859A2247C36300AB03B0 /* TimerGroupAddable.swift */,
+				1503859E2247CCDB00AB03B0 /* TimerGroupRemovable.swift */,
+			);
+			path = TimerGroup;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -258,24 +252,6 @@
 			productReference = 0407C743223A8E92009FDB5B /* FarmTimerTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		0407C74D223A8E92009FDB5B /* FarmTimerUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 0407C75D223A8E92009FDB5B /* Build configuration list for PBXNativeTarget "FarmTimerUITests" */;
-			buildPhases = (
-				0407C74A223A8E92009FDB5B /* Sources */,
-				0407C74B223A8E92009FDB5B /* Frameworks */,
-				0407C74C223A8E92009FDB5B /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				0407C750223A8E92009FDB5B /* PBXTargetDependency */,
-			);
-			name = FarmTimerUITests;
-			productName = FarmTimerUITests;
-			productReference = 0407C74E223A8E92009FDB5B /* FarmTimerUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -291,11 +267,6 @@
 						LastSwiftMigration = 1020;
 					};
 					0407C742223A8E92009FDB5B = {
-						CreatedOnToolsVersion = 10.1;
-						LastSwiftMigration = 1020;
-						TestTargetID = 0407C72B223A8E90009FDB5B;
-					};
-					0407C74D223A8E92009FDB5B = {
 						CreatedOnToolsVersion = 10.1;
 						LastSwiftMigration = 1020;
 						TestTargetID = 0407C72B223A8E90009FDB5B;
@@ -317,7 +288,6 @@
 			targets = (
 				0407C72B223A8E90009FDB5B /* FarmTimer */,
 				0407C742223A8E92009FDB5B /* FarmTimerTests */,
-				0407C74D223A8E92009FDB5B /* FarmTimerUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -340,13 +310,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		0407C74C223A8E92009FDB5B /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -355,16 +318,20 @@
 			buildActionMask = 2147483647;
 			files = (
 				045001BD223D492B00DEE484 /* TimerProcessable.swift in Sources */,
+				150385A12247CF6900AB03B0 /* TimerGroupStateSwitchable.swift in Sources */,
 				045001B7223D490900DEE484 /* TimeContainer.swift in Sources */,
 				045001B9223D491300DEE484 /* TimerState.swift in Sources */,
 				045001C1223D494800DEE484 /* TimerServiceProtocol.swift in Sources */,
 				040EC776223E8F1700073B90 /* TimerCell.swift in Sources */,
 				045001BB223D491F00DEE484 /* TimerContainable.swift in Sources */,
 				040EC77E223E914100073B90 /* TimerItem.swift in Sources */,
+				1503859B2247C36300AB03B0 /* TimerGroupAddable.swift in Sources */,
+				150385972247C2BB00AB03B0 /* TimerGroup.swift in Sources */,
 				0407C732223A8E91009FDB5B /* TimerListController.swift in Sources */,
 				040EC781223E91C800073B90 /* TimerListViewModel.swift in Sources */,
 				0407C730223A8E90009FDB5B /* AppDelegate.swift in Sources */,
 				0407C738223A8E91009FDB5B /* FarmTimer.xcdatamodeld in Sources */,
+				1503859F2247CCDB00AB03B0 /* TimerGroupRemovable.swift in Sources */,
 				045001BF223D493700DEE484 /* TimerEventHandlable.swift in Sources */,
 				045001C3223D498A00DEE484 /* TimerService.swift in Sources */,
 			);
@@ -375,16 +342,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				0407C748223A8E92009FDB5B /* TimerServiceTests.swift in Sources */,
+				150385992247C2DE00AB03B0 /* TimerGroupTests.swift in Sources */,
 				0409145F223D3A1C0036393A /* TestUtil.swift in Sources */,
 				040EC779223E910800073B90 /* TimerListModelTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		0407C74A223A8E92009FDB5B /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				0407C753223A8E92009FDB5B /* FarmTimerUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -395,11 +355,6 @@
 			isa = PBXTargetDependency;
 			target = 0407C72B223A8E90009FDB5B /* FarmTimer */;
 			targetProxy = 0407C744223A8E92009FDB5B /* PBXContainerItemProxy */;
-		};
-		0407C750223A8E92009FDB5B /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 0407C72B223A8E90009FDB5B /* FarmTimer */;
-			targetProxy = 0407C74F223A8E92009FDB5B /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -617,46 +572,6 @@
 			};
 			name = Release;
 		};
-		0407C75E223A8E92009FDB5B /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = HY47J4787Q;
-				INFOPLIST_FILE = FarmTimerUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.rollmind.FarmTimerUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = FarmTimer;
-			};
-			name = Debug;
-		};
-		0407C75F223A8E92009FDB5B /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = HY47J4787Q;
-				INFOPLIST_FILE = FarmTimerUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.rollmind.FarmTimerUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = FarmTimer;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -683,15 +598,6 @@
 			buildConfigurations = (
 				0407C75B223A8E92009FDB5B /* Debug */,
 				0407C75C223A8E92009FDB5B /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		0407C75D223A8E92009FDB5B /* Build configuration list for PBXNativeTarget "FarmTimerUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				0407C75E223A8E92009FDB5B /* Debug */,
-				0407C75F223A8E92009FDB5B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
