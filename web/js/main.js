@@ -86,8 +86,9 @@ let history;
 let log;
 
 function toTimeFormat(timestamp) {
+    const hours = parseInt(timestamp / 36e5, 10);
     const time = new Date(timestamp);
-    return time.getUTCHours() + ':' + time.getUTCMinutes() + ':' + time.getUTCSeconds();
+    return hours + ':' + time.getUTCMinutes() + ':' + time.getUTCSeconds();
 }
 
 function saveLog(state) {
