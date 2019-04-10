@@ -244,7 +244,9 @@ function getToday() {
 }
 
 function getDateStarted(dateObj) {
-    return new Date(dateObj.toLocaleDateString()).getTime();
+    const now = new Date();
+    const startOfDay = new Date(now.getFullYear(), now.getMonth(), now.getDate());
+    return startOfDay.getTime();
 }
 
 function setData(key, obj) {
