@@ -20,6 +20,16 @@ const template = `
                 </div>
             </div>
         </div>
+        <div>
+            <div v-for="(logData, actName) in getHistory()">
+                <span>{{ actName }}</span>
+                <ul>
+                    <li v-for="log in logData">
+                        {{ log.dateStr }} {{ log.elapsed | toTimeFormat }}
+                    </li>
+                </ul>
+            </div>
+        </div>
     </div>
 `;
 
@@ -58,6 +68,7 @@ Vue.component('timer-list', {
         },
         start: function(state) {
             console.log('start pressed')
+            state.date = getToday();
             state.started = new Date().getTime();
             state.elapsed = state.save;
             setData(TIMER_KEY, timers);
@@ -78,6 +89,9 @@ Vue.component('timer-list', {
             saveLog(state);
             saveHistory(state);
         },
+        getHistory: function() {
+            return history;
+        }
     }
 })
 
@@ -105,6 +119,10 @@ function saveLog(state) {
 
     log[state.name] = activity;
     setData(LOG_KEY, log);
+}
+
+window.getLog = function() {
+    return log;
 }
 
 function saveHistory(state) {
@@ -216,7 +234,7 @@ new Vue({
     }
 });
 
-const tick = 100;
+const tick = 1000;
 
 setTimeout(function upd() {
     timers = timers.map(function(item) {
