@@ -121,10 +121,6 @@ function saveLog(state) {
     setData(LOG_KEY, log);
 }
 
-window.getLog = function() {
-    return log;
-}
-
 function getDateLog(state) {
     const today = getToday();
 
@@ -180,9 +176,9 @@ function updateHistory(state) {
     console.log('activity');
     console.log(activity.length);
 
-    window.aa = activity;
-    window.hh = history;
-    window.ll = log;
+    // window.aa = activity;
+    // window.hh = history;
+    // window.ll = log;
 }
 
 (function main() {
