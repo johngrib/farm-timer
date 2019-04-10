@@ -147,7 +147,7 @@ function getDateLog(state) {
 function updateHistory(state) {
 
     const activity = getDateLog(state);
-    const historyData = history[state.name];
+    const historyData = history[state.name] ? history[state.name] : {};
     const dateList = Object.keys(activity);
 
     dateList.forEach(function(date) {
