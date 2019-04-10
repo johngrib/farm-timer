@@ -87,7 +87,7 @@ Vue.component('timer-list', {
             setData(TIMER_KEY, timers);
             console.log(state)
             saveLog(state);
-            saveHistory(state);
+            updateHistory(state);
         },
         getHistory: function() {
             return history;
@@ -125,13 +125,14 @@ window.getLog = function() {
     return log;
 }
 
-function saveHistory(state) {
-
+function getDateLog(state) {
     const today = getToday();
 
-    const activity = log[state.name].sort(function(s1, s2) {
+    const data = log[state.name].sort(function(s1, s2) {
         return s1.date - s1.date;
-    }).reduce(function(data, curr) {
+    });
+
+    const activity = data.reduce(function(data, curr) {
         if (!data[curr.date]) {
             data[curr.date] = {
                 date: curr.date,
@@ -144,13 +145,44 @@ function saveHistory(state) {
         return data;
     }, {});
 
-    console.log(activity);
+    return activity;
+}
 
-    history[state.name] = activity;
+function updateHistory(state) {
 
+    const activity = getDateLog(state);
+    const historyData = history[state.name];
+    const dateList = Object.keys(activity);
+
+    dateList.forEach(function(date) {
+        historyData[date] = activity[date];
+    });
+
+    history[state.name] = historyData;
     setData(HISTORY_KEY, history);
 
+    // log 일부 삭제
+    if (dateList.length < 2) {
+        return;
+    }
+
+    const minDate = dateList.reduce(function(a, b) {
+        return (a < b) ? a : b;
+    });
+
+    const reducedLog = log[state.name]
+        .filter(function(item) {
+            return item.date > minDate;
+        });
+
+    log[state.name] = reducedLog;
+
+    console.log('activity');
+    console.log(activity.length);
+
+    window.aa = activity;
     window.hh = history;
+    window.ll = log;
 }
 
 (function main() {
