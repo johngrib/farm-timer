@@ -16,6 +16,8 @@ target 'FarmTimer' do
     # Pods for testing
     pod 'Quick'
     pod 'Nimble'
+    pod 'RxTest'
+    pod 'RxBlocking'
   end
 
 end
