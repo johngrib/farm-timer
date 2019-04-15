@@ -9,6 +9,7 @@
 import XCTest
 import Quick
 import Nimble
+import RxBlocking
 @testable import FarmTimer
 
 class FarmTimerTests: QuickSpec {
