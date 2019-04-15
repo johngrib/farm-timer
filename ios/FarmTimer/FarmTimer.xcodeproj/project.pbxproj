@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		155D8C2F2264C43A0062EE7C /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 155D8C2E2264C43A0062EE7C /* Coordinator.swift */; };
+		155D8C322264C46E0062EE7C /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 155D8C312264C46E0062EE7C /* MainViewModel.swift */; };
 		15C907292264ABFE0099EB26 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15C907282264ABFE0099EB26 /* AppDelegate.swift */; };
 		15C9072B2264ABFE0099EB26 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15C9072A2264ABFE0099EB26 /* ViewController.swift */; };
 		15C9072E2264ABFE0099EB26 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 15C9072C2264ABFE0099EB26 /* Main.storyboard */; };
@@ -29,6 +31,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		155D8C2E2264C43A0062EE7C /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		155D8C312264C46E0062EE7C /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
 		15C907252264ABFE0099EB26 /* FarmTimer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FarmTimer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		15C907282264ABFE0099EB26 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		15C9072A2264ABFE0099EB26 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -68,6 +72,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		155D8C2D2264C4290062EE7C /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				155D8C2E2264C43A0062EE7C /* Coordinator.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		155D8C302264C4610062EE7C /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				155D8C312264C46E0062EE7C /* MainViewModel.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
 		15C9071C2264ABFE0099EB26 = {
 			isa = PBXGroup;
 			children = (
@@ -91,6 +111,8 @@
 		15C907272264ABFE0099EB26 /* FarmTimer */ = {
 			isa = PBXGroup;
 			children = (
+				155D8C302264C4610062EE7C /* Main */,
+				155D8C2D2264C4290062EE7C /* Coordinator */,
 				15C907282264ABFE0099EB26 /* AppDelegate.swift */,
 				15C9072A2264ABFE0099EB26 /* ViewController.swift */,
 				15C9072C2264ABFE0099EB26 /* Main.storyboard */,
@@ -357,6 +379,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				155D8C322264C46E0062EE7C /* MainViewModel.swift in Sources */,
+				155D8C2F2264C43A0062EE7C /* Coordinator.swift in Sources */,
 				15C9072B2264ABFE0099EB26 /* ViewController.swift in Sources */,
 				15C907292264ABFE0099EB26 /* AppDelegate.swift in Sources */,
 				15C907312264ABFE0099EB26 /* FarmTimer.xcdatamodeld in Sources */,

@@ -19,19 +19,22 @@ class FarmTimerTests: QuickSpec {
     override func spec() {
         continueAfterFailure = false
         
-        var coordinator: Coordinatorable!
+        var coordinator: MockCoordinator!
         var viewModel: MainViewModel!
-        var showAlertEvent: PublishRelay<Void>!
+        var showAddTimerAlertEvent: PublishRelay<Void>!
         
         beforeEach {
             coordinator = MockCoordinator()
-            showAlertEvent = PublishRelay()
-            viewModel = MainViewModel(showAlert: showAlertEvent.asObservable())
+            showAddTimerAlertEvent = PublishRelay()
+            viewModel = MainViewModel(showAddTimerAlert: showAddTimerAlertEvent.asDriver(onErrorJustReturn: ()))
         }
         
         context("더하기 버튼 누르면") {
             it("타이머 추가 얼럿을 표시한다.") {
+                // action
+                showAddTimerAlertEvent.accept(())
                 
+                expect(coordinator.calledShowAddTimerAlert) == true
             }
             context("타이머 추가 얼럿을 완료하면") {
                 it("새로운 타이머를 추가한다.") {
@@ -43,18 +46,11 @@ class FarmTimerTests: QuickSpec {
     }
 }
 
-class MainViewModel {
-    
-    init(showAlert: Observable<Void>) {
-        
-    }
-    
-}
-
-protocol Coordinatorable {
-    
-}
-
 class MockCoordinator: Coordinatorable {
     
+    var calledShowAddTimerAlert: Bool = false
+
+    func showAddTimerAlert(_ action: Driver<Void>) {
+        
+    }
 }
