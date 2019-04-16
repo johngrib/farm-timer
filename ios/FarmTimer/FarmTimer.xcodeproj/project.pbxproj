@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		15506A6622660B2E009B14CB /* AlertFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15506A6522660B2E009B14CB /* AlertFactory.swift */; };
 		155D8C2F2264C43A0062EE7C /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 155D8C2E2264C43A0062EE7C /* Coordinator.swift */; };
 		155D8C322264C46E0062EE7C /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 155D8C312264C46E0062EE7C /* MainViewModel.swift */; };
 		15C907292264ABFE0099EB26 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15C907282264ABFE0099EB26 /* AppDelegate.swift */; };
@@ -31,6 +32,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		15506A6522660B2E009B14CB /* AlertFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertFactory.swift; sourceTree = "<group>"; };
 		155D8C2E2264C43A0062EE7C /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		155D8C312264C46E0062EE7C /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
 		15C907252264ABFE0099EB26 /* FarmTimer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FarmTimer.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -72,9 +74,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		15506A6422660B22009B14CB /* Factory */ = {
+			isa = PBXGroup;
+			children = (
+				15506A6522660B2E009B14CB /* AlertFactory.swift */,
+			);
+			path = Factory;
+			sourceTree = "<group>";
+		};
 		155D8C2D2264C4290062EE7C /* Coordinator */ = {
 			isa = PBXGroup;
 			children = (
+				15506A6422660B22009B14CB /* Factory */,
 				155D8C2E2264C43A0062EE7C /* Coordinator.swift */,
 			);
 			path = Coordinator;
@@ -384,6 +395,7 @@
 				15C9072B2264ABFE0099EB26 /* ViewController.swift in Sources */,
 				15C907292264ABFE0099EB26 /* AppDelegate.swift in Sources */,
 				15C907312264ABFE0099EB26 /* FarmTimer.xcdatamodeld in Sources */,
+				15506A6622660B2E009B14CB /* AlertFactory.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

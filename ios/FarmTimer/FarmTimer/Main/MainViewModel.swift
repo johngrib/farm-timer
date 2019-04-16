@@ -11,9 +11,19 @@ import RxSwift
 import RxCocoa
 
 class MainViewModel {
-    
-    init(showAddTimerAlert: Driver<Void>) {
-        
+
+    struct Input {
+        let showAddTimerAlert: Driver<Void>
     }
-    
+
+    let disposeBag: DisposeBag
+
+    init(coordinator: Coordinatorable = Coordinator(), input: Input) {
+
+        self.disposeBag = DisposeBag()
+
+        input.showAddTimerAlert.drive(onNext: coordinator.showAddTimerAlert).disposed(by: disposeBag)
+
+    }
+
 }

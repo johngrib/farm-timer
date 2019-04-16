@@ -11,7 +11,27 @@ import RxSwift
 import RxCocoa
 
 protocol Coordinatorable {
-    
-    func showAddTimerAlert(_ action: Driver<Void>)
-    
+
+    var alertFactory: AlertFactoryProtocol { get }
+
+    init(alertFactory: AlertFactoryProtocol)
+
+    func showAddTimerAlert()
+}
+
+class Coordinator: Coordinatorable {
+
+    let alertFactory: AlertFactoryProtocol
+
+    required init(alertFactory: AlertFactoryProtocol = AlertFactory()) {
+        self.alertFactory = alertFactory
+    }
+
+
+    func showAddTimerAlert() {
+        alertFactory.presentAlertWithTextField { result in
+            
+        }
+    }
+
 }

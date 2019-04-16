@@ -18,23 +18,27 @@ class FarmTimerTests: QuickSpec {
 
     override func spec() {
         continueAfterFailure = false
-        
-        var coordinator: MockCoordinator!
+
+        var alertFactory: MockAlertFactory!
+        var coordinator: Coordinator!
+        var viewModelInput: MainViewModel.Input!
         var viewModel: MainViewModel!
         var showAddTimerAlertEvent: PublishRelay<Void>!
         
         beforeEach {
-            coordinator = MockCoordinator()
+            alertFactory = MockAlertFactory()
+            coordinator = Coordinator(alertFactory: alertFactory)
             showAddTimerAlertEvent = PublishRelay()
-            viewModel = MainViewModel(showAddTimerAlert: showAddTimerAlertEvent.asDriver(onErrorJustReturn: ()))
+            viewModelInput = .init(showAddTimerAlert: showAddTimerAlertEvent.asDriver(onErrorJustReturn: ()))
+            viewModel = MainViewModel(coordinator: coordinator, input: viewModelInput)
         }
         
         context("더하기 버튼 누르면") {
             it("타이머 추가 얼럿을 표시한다.") {
                 // action
                 showAddTimerAlertEvent.accept(())
-                
-                expect(coordinator.calledShowAddTimerAlert) == true
+
+                expect(alertFactory.calledFunction) == "presentAlertWithTextField(_:)"
             }
             context("타이머 추가 얼럿을 완료하면") {
                 it("새로운 타이머를 추가한다.") {
@@ -46,11 +50,12 @@ class FarmTimerTests: QuickSpec {
     }
 }
 
-class MockCoordinator: Coordinatorable {
-    
-    var calledShowAddTimerAlert: Bool = false
+class MockAlertFactory: AlertFactoryProtocol {
 
-    func showAddTimerAlert(_ action: Driver<Void>) {
-        
+    var calledFunction: String?
+
+    func presentAlertWithTextField(_ completion: @escaping (String?) -> Void) {
+        calledFunction = #function
     }
+    
 }
