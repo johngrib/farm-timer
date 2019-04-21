@@ -9,20 +9,37 @@
 import Foundation
 import RxSwift
 import RxCocoa
+import Action
+import Comparators
 
 class MainViewModel {
 
     struct Input {
-        let showAddTimerAlert: Driver<Void>
+        let clickAddTimer: Driver<Void>
+        let newTimerTitle: Driver<String>
     }
 
     let disposeBag: DisposeBag
 
-    init(coordinator: Coordinatorable = Coordinator(), input: Input) {
+    let showTimerAlert: Driver<Void>
+
+    let timerViewModels: BehaviorRelay<[TimerViewModel]>
+
+    init(_ input: Input) {
 
         self.disposeBag = DisposeBag()
 
-        input.showAddTimerAlert.drive(onNext: coordinator.showAddTimerAlert).disposed(by: disposeBag)
+        showTimerAlert = input.clickAddTimer.asSharedSequence()
+
+        let timerViewModels = BehaviorRelay<[TimerViewModel]>(value: [])
+        self.timerViewModels = timerViewModels
+        input.newTimerTitle
+            .map(TimerViewModel.init)
+            .filter(timerViewModels.value.not.contains)
+            .drive(onNext: { title in
+
+            })
+            .disposed(by: disposeBag)
 
     }
 

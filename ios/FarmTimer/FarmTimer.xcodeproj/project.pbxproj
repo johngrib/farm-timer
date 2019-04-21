@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		15506A6622660B2E009B14CB /* AlertFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15506A6522660B2E009B14CB /* AlertFactory.swift */; };
+		155C1546226A127C009AF04F /* TimerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 155C1545226A127C009AF04F /* TimerViewModel.swift */; };
 		155D8C2F2264C43A0062EE7C /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 155D8C2E2264C43A0062EE7C /* Coordinator.swift */; };
 		155D8C322264C46E0062EE7C /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 155D8C312264C46E0062EE7C /* MainViewModel.swift */; };
 		15C907292264ABFE0099EB26 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15C907282264ABFE0099EB26 /* AppDelegate.swift */; };
@@ -17,6 +18,12 @@
 		15C907332264ABFF0099EB26 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 15C907322264ABFF0099EB26 /* Assets.xcassets */; };
 		15C907362264ABFF0099EB26 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 15C907342264ABFF0099EB26 /* LaunchScreen.storyboard */; };
 		15C907412264ABFF0099EB26 /* FarmTimerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15C907402264ABFF0099EB26 /* FarmTimerTests.swift */; };
+		15E25C53226B7C3D0096FD41 /* Comparators.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 15E25C4A226B7C3D0096FD41 /* Comparators.framework */; };
+		15E25C5A226B7C3D0096FD41 /* ComparatorsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15E25C59226B7C3D0096FD41 /* ComparatorsTests.swift */; };
+		15E25C5C226B7C3D0096FD41 /* Comparators.h in Headers */ = {isa = PBXBuildFile; fileRef = 15E25C4C226B7C3D0096FD41 /* Comparators.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		15E25C5F226B7C3D0096FD41 /* Comparators.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 15E25C4A226B7C3D0096FD41 /* Comparators.framework */; };
+		15E25C60226B7C3D0096FD41 /* Comparators.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 15E25C4A226B7C3D0096FD41 /* Comparators.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		15E25C69226B7CB80096FD41 /* Comparators.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15E25C68226B7CB80096FD41 /* Comparators.swift */; };
 		E1D78B04129EEA85811B1058 /* Pods_FarmTimer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 26306453BAE48955E365824A /* Pods_FarmTimer.framework */; };
 		EB0BD0E0A237134713BF6978 /* Pods_FarmTimerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 23E10F0BEDD661C3FEE8D484 /* Pods_FarmTimerTests.framework */; };
 /* End PBXBuildFile section */
@@ -29,10 +36,46 @@
 			remoteGlobalIDString = 15C907242264ABFE0099EB26;
 			remoteInfo = FarmTimer;
 		};
+		15E25C54226B7C3D0096FD41 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 15C9071D2264ABFE0099EB26 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 15E25C49226B7C3D0096FD41;
+			remoteInfo = Comparators;
+		};
+		15E25C56226B7C3D0096FD41 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 15C9071D2264ABFE0099EB26 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 15C907242264ABFE0099EB26;
+			remoteInfo = FarmTimer;
+		};
+		15E25C5D226B7C3D0096FD41 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 15C9071D2264ABFE0099EB26 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 15E25C49226B7C3D0096FD41;
+			remoteInfo = Comparators;
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		15E25C66226B7C3D0096FD41 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				15E25C60226B7C3D0096FD41 /* Comparators.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		15506A6522660B2E009B14CB /* AlertFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertFactory.swift; sourceTree = "<group>"; };
+		155C1545226A127C009AF04F /* TimerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerViewModel.swift; sourceTree = "<group>"; };
 		155D8C2E2264C43A0062EE7C /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		155D8C312264C46E0062EE7C /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
 		15C907252264ABFE0099EB26 /* FarmTimer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FarmTimer.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -46,6 +89,13 @@
 		15C9073C2264ABFF0099EB26 /* FarmTimerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FarmTimerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		15C907402264ABFF0099EB26 /* FarmTimerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FarmTimerTests.swift; sourceTree = "<group>"; };
 		15C907422264ABFF0099EB26 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		15E25C4A226B7C3D0096FD41 /* Comparators.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Comparators.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		15E25C4C226B7C3D0096FD41 /* Comparators.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Comparators.h; sourceTree = "<group>"; };
+		15E25C4D226B7C3D0096FD41 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		15E25C52226B7C3D0096FD41 /* ComparatorsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ComparatorsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		15E25C59226B7C3D0096FD41 /* ComparatorsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComparatorsTests.swift; sourceTree = "<group>"; };
+		15E25C5B226B7C3D0096FD41 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		15E25C68226B7CB80096FD41 /* Comparators.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Comparators.swift; sourceTree = "<group>"; };
 		23E10F0BEDD661C3FEE8D484 /* Pods_FarmTimerTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FarmTimerTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		26306453BAE48955E365824A /* Pods_FarmTimer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FarmTimer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3565DD5CC4F81B6C89A1AD07 /* Pods-FarmTimerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FarmTimerTests.release.xcconfig"; path = "Target Support Files/Pods-FarmTimerTests/Pods-FarmTimerTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -59,6 +109,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				15E25C5F226B7C3D0096FD41 /* Comparators.framework in Frameworks */,
 				E1D78B04129EEA85811B1058 /* Pods_FarmTimer.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -71,6 +122,21 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		15E25C47226B7C3D0096FD41 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		15E25C4F226B7C3D0096FD41 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				15E25C53226B7C3D0096FD41 /* Comparators.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -80,6 +146,14 @@
 				15506A6522660B2E009B14CB /* AlertFactory.swift */,
 			);
 			path = Factory;
+			sourceTree = "<group>";
+		};
+		155C1544226A1273009AF04F /* Timer */ = {
+			isa = PBXGroup;
+			children = (
+				155C1545226A127C009AF04F /* TimerViewModel.swift */,
+			);
+			path = Timer;
 			sourceTree = "<group>";
 		};
 		155D8C2D2264C4290062EE7C /* Coordinator */ = {
@@ -104,6 +178,8 @@
 			children = (
 				15C907272264ABFE0099EB26 /* FarmTimer */,
 				15C9073F2264ABFF0099EB26 /* FarmTimerTests */,
+				15E25C4B226B7C3D0096FD41 /* Comparators */,
+				15E25C58226B7C3D0096FD41 /* ComparatorsTests */,
 				15C907262264ABFE0099EB26 /* Products */,
 				95AD413222C9AA56C27FCD0D /* Pods */,
 				CE20CD8BE1B82658C041539A /* Frameworks */,
@@ -115,6 +191,8 @@
 			children = (
 				15C907252264ABFE0099EB26 /* FarmTimer.app */,
 				15C9073C2264ABFF0099EB26 /* FarmTimerTests.xctest */,
+				15E25C4A226B7C3D0096FD41 /* Comparators.framework */,
+				15E25C52226B7C3D0096FD41 /* ComparatorsTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -122,6 +200,7 @@
 		15C907272264ABFE0099EB26 /* FarmTimer */ = {
 			isa = PBXGroup;
 			children = (
+				155C1544226A1273009AF04F /* Timer */,
 				155D8C302264C4610062EE7C /* Main */,
 				155D8C2D2264C4290062EE7C /* Coordinator */,
 				15C907282264ABFE0099EB26 /* AppDelegate.swift */,
@@ -142,6 +221,25 @@
 				15C907422264ABFF0099EB26 /* Info.plist */,
 			);
 			path = FarmTimerTests;
+			sourceTree = "<group>";
+		};
+		15E25C4B226B7C3D0096FD41 /* Comparators */ = {
+			isa = PBXGroup;
+			children = (
+				15E25C4C226B7C3D0096FD41 /* Comparators.h */,
+				15E25C68226B7CB80096FD41 /* Comparators.swift */,
+				15E25C4D226B7C3D0096FD41 /* Info.plist */,
+			);
+			path = Comparators;
+			sourceTree = "<group>";
+		};
+		15E25C58226B7C3D0096FD41 /* ComparatorsTests */ = {
+			isa = PBXGroup;
+			children = (
+				15E25C59226B7C3D0096FD41 /* ComparatorsTests.swift */,
+				15E25C5B226B7C3D0096FD41 /* Info.plist */,
+			);
+			path = ComparatorsTests;
 			sourceTree = "<group>";
 		};
 		95AD413222C9AA56C27FCD0D /* Pods */ = {
@@ -166,6 +264,17 @@
 		};
 /* End PBXGroup section */
 
+/* Begin PBXHeadersBuildPhase section */
+		15E25C45226B7C3D0096FD41 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				15E25C5C226B7C3D0096FD41 /* Comparators.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
 /* Begin PBXNativeTarget section */
 		15C907242264ABFE0099EB26 /* FarmTimer */ = {
 			isa = PBXNativeTarget;
@@ -177,10 +286,12 @@
 				15C907232264ABFE0099EB26 /* Resources */,
 				E3E1BB7F5110D10D7358267B /* [CP] Embed Pods Frameworks */,
 				15C9074B2264B0550099EB26 /* ShellScript */,
+				15E25C66226B7C3D0096FD41 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				15E25C5E226B7C3D0096FD41 /* PBXTargetDependency */,
 			);
 			name = FarmTimer;
 			productName = FarmTimer;
@@ -207,6 +318,43 @@
 			productReference = 15C9073C2264ABFF0099EB26 /* FarmTimerTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		15E25C49226B7C3D0096FD41 /* Comparators */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 15E25C65226B7C3D0096FD41 /* Build configuration list for PBXNativeTarget "Comparators" */;
+			buildPhases = (
+				15E25C45226B7C3D0096FD41 /* Headers */,
+				15E25C46226B7C3D0096FD41 /* Sources */,
+				15E25C47226B7C3D0096FD41 /* Frameworks */,
+				15E25C48226B7C3D0096FD41 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Comparators;
+			productName = Comparators;
+			productReference = 15E25C4A226B7C3D0096FD41 /* Comparators.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		15E25C51226B7C3D0096FD41 /* ComparatorsTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 15E25C67226B7C3D0096FD41 /* Build configuration list for PBXNativeTarget "ComparatorsTests" */;
+			buildPhases = (
+				15E25C4E226B7C3D0096FD41 /* Sources */,
+				15E25C4F226B7C3D0096FD41 /* Frameworks */,
+				15E25C50226B7C3D0096FD41 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				15E25C55226B7C3D0096FD41 /* PBXTargetDependency */,
+				15E25C57226B7C3D0096FD41 /* PBXTargetDependency */,
+			);
+			name = ComparatorsTests;
+			productName = ComparatorsTests;
+			productReference = 15E25C52226B7C3D0096FD41 /* ComparatorsTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -222,6 +370,14 @@
 					};
 					15C9073B2264ABFF0099EB26 = {
 						CreatedOnToolsVersion = 10.2;
+						TestTargetID = 15C907242264ABFE0099EB26;
+					};
+					15E25C49226B7C3D0096FD41 = {
+						CreatedOnToolsVersion = 10.2.1;
+						LastSwiftMigration = 1020;
+					};
+					15E25C51226B7C3D0096FD41 = {
+						CreatedOnToolsVersion = 10.2.1;
 						TestTargetID = 15C907242264ABFE0099EB26;
 					};
 				};
@@ -241,6 +397,8 @@
 			targets = (
 				15C907242264ABFE0099EB26 /* FarmTimer */,
 				15C9073B2264ABFF0099EB26 /* FarmTimerTests */,
+				15E25C49226B7C3D0096FD41 /* Comparators */,
+				15E25C51226B7C3D0096FD41 /* ComparatorsTests */,
 			);
 		};
 /* End PBXProject section */
@@ -257,6 +415,20 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		15C9073A2264ABFF0099EB26 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		15E25C48226B7C3D0096FD41 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		15E25C50226B7C3D0096FD41 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -292,20 +464,24 @@
 			);
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-FarmTimerTests/Pods-FarmTimerTests-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
 				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/Nimble/Nimble.framework",
 				"${BUILT_PRODUCTS_DIR}/Quick/Quick.framework",
 				"${BUILT_PRODUCTS_DIR}/RxBlocking/RxBlocking.framework",
+				"${BUILT_PRODUCTS_DIR}/RxExpect/RxExpect.framework",
 				"${BUILT_PRODUCTS_DIR}/RxTest/RxTest.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 			);
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Nimble.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Quick.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxBlocking.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxExpect.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxTest.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -344,6 +520,7 @@
 			);
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-FarmTimer/Pods-FarmTimer-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Action/Action.framework",
 				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
 				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
@@ -352,6 +529,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Action.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
@@ -390,6 +568,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				155C1546226A127C009AF04F /* TimerViewModel.swift in Sources */,
 				155D8C322264C46E0062EE7C /* MainViewModel.swift in Sources */,
 				155D8C2F2264C43A0062EE7C /* Coordinator.swift in Sources */,
 				15C9072B2264ABFE0099EB26 /* ViewController.swift in Sources */,
@@ -407,6 +586,22 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		15E25C46226B7C3D0096FD41 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				15E25C69226B7CB80096FD41 /* Comparators.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		15E25C4E226B7C3D0096FD41 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				15E25C5A226B7C3D0096FD41 /* ComparatorsTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -414,6 +609,21 @@
 			isa = PBXTargetDependency;
 			target = 15C907242264ABFE0099EB26 /* FarmTimer */;
 			targetProxy = 15C9073D2264ABFF0099EB26 /* PBXContainerItemProxy */;
+		};
+		15E25C55226B7C3D0096FD41 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 15E25C49226B7C3D0096FD41 /* Comparators */;
+			targetProxy = 15E25C54226B7C3D0096FD41 /* PBXContainerItemProxy */;
+		};
+		15E25C57226B7C3D0096FD41 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 15C907242264ABFE0099EB26 /* FarmTimer */;
+			targetProxy = 15E25C56226B7C3D0096FD41 /* PBXContainerItemProxy */;
+		};
+		15E25C5E226B7C3D0096FD41 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 15E25C49226B7C3D0096FD41 /* Comparators */;
+			targetProxy = 15E25C5D226B7C3D0096FD41 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -557,6 +767,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = B15D749B2BCCFB1AEFBF20B8 /* Pods-FarmTimer.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = HY47J4787Q;
@@ -576,6 +787,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 7A234C4B1701C1D87C8C1B6D /* Pods-FarmTimer.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = HY47J4787Q;
@@ -635,6 +847,105 @@
 			};
 			name = Release;
 		};
+		15E25C61226B7C3D0096FD41 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = HY47J4787Q;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = Comparators/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.rollmind.Comparators;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		15E25C62226B7C3D0096FD41 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = HY47J4787Q;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = Comparators/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.rollmind.Comparators;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		15E25C63226B7C3D0096FD41 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = HY47J4787Q;
+				INFOPLIST_FILE = ComparatorsTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.rollmind.ComparatorsTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FarmTimer.app/FarmTimer";
+			};
+			name = Debug;
+		};
+		15E25C64226B7C3D0096FD41 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = HY47J4787Q;
+				INFOPLIST_FILE = ComparatorsTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.rollmind.ComparatorsTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FarmTimer.app/FarmTimer";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -661,6 +972,24 @@
 			buildConfigurations = (
 				15C907492264ABFF0099EB26 /* Debug */,
 				15C9074A2264ABFF0099EB26 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		15E25C65226B7C3D0096FD41 /* Build configuration list for PBXNativeTarget "Comparators" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				15E25C61226B7C3D0096FD41 /* Debug */,
+				15E25C62226B7C3D0096FD41 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		15E25C67226B7C3D0096FD41 /* Build configuration list for PBXNativeTarget "ComparatorsTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				15E25C63226B7C3D0096FD41 /* Debug */,
+				15E25C64226B7C3D0096FD41 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

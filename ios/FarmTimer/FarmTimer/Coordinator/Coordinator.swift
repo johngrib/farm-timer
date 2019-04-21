@@ -12,21 +12,18 @@ import RxCocoa
 
 protocol Coordinatorable {
 
-    var alertFactory: AlertFactoryProtocol { get }
+    var alertFactory: AlertFactoryProtocol { get set }
 
-    init(alertFactory: AlertFactoryProtocol)
+    init()
 
     func showAddTimerAlert()
 }
 
 class Coordinator: Coordinatorable {
 
-    let alertFactory: AlertFactoryProtocol
+    lazy var alertFactory: AlertFactoryProtocol = AlertFactory()
 
-    required init(alertFactory: AlertFactoryProtocol = AlertFactory()) {
-        self.alertFactory = alertFactory
-    }
-
+    required init() {}
 
     func showAddTimerAlert() {
         alertFactory.presentAlertWithTextField { result in
