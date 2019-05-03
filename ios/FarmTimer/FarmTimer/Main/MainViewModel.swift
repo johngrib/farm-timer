@@ -10,37 +10,26 @@ import Foundation
 import RxSwift
 import RxCocoa
 import Action
-import Comparators
 
 class MainViewModel {
 
-    struct Input {
-        let clickAddTimer: Driver<Void>
-        let newTimerTitle: Driver<String>
+    var count: Int { return timers.count }
+    private(set) var timers: [TimerViewModel] = [] {
+        didSet {
+            update()
+        }
+    }
+    private var refreshHandler: () -> Void = { }
+
+    func add(_ name: String) {
+        timers.append(TimerViewModel(title: name))
     }
 
-    let disposeBag: DisposeBag
-
-    let showTimerAlert: Driver<Void>
-
-    let timerViewModels: BehaviorRelay<[TimerViewModel]>
-
-    init(_ input: Input) {
-
-        self.disposeBag = DisposeBag()
-
-        showTimerAlert = input.clickAddTimer.asSharedSequence()
-
-        let timerViewModels = BehaviorRelay<[TimerViewModel]>(value: [])
-        self.timerViewModels = timerViewModels
-        input.newTimerTitle
-            .map(TimerViewModel.init)
-            .filter(timerViewModels.value.not.contains)
-            .drive(onNext: { title in
-
-            })
-            .disposed(by: disposeBag)
-
+    func refresh(_ completion: @escaping () -> Void) {
+        self.refreshHandler = completion
     }
 
+    private func update() {
+        refreshHandler()
+    }
 }

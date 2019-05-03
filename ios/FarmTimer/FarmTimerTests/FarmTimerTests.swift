@@ -14,102 +14,27 @@ import RxCocoa
 import RxTest
 import Action
 import RxExpect
-import Comparators
 @testable import FarmTimer
 
-class FarmTimerTests: XCTestCase {
+class FarmTimerTests: QuickSpec {
 
-    let clickAddTimerButton = PublishRelay<Void>()
-    let newTimerTitle = PublishRelay<String>()
-    var input: MainViewModel.Input!
-    var viewModel: MainViewModel!
-
-    override func setUp() {
-        super.setUp()
-        input = .init(clickAddTimer: clickAddTimerButton.asDriver(onErrorJustReturn: ()),
-                      newTimerTitle: newTimerTitle.asDriver(onErrorJustReturn: "Error"))
-        viewModel = MainViewModel(input)
-
+    override func spec() {
         continueAfterFailure = false
-    }
 
-    func testShowTimerAlert() {
-        let test = RxExpect()
-        // 타이머 추가 이벤트 발생
-        test.input(clickAddTimerButton, [.next(100, ())])
-        // 타이머 얼럿 표시 스트림 emit
-        test.assert(viewModel.showTimerAlert.map({ _ in 1 }), closure: { events in
-            XCTAssertEqual(events, [.next(100, 1)])
-        })
-    }
-
-    func testAddNewTimer() {
-        let test = RxExpect()
-        // 타이머 얼럿으로부터 타이머 정보 추가
-        test.input(newTimerTitle, [.next(100, "공부")])
-        test.assert(viewModel.timerViewModels, closure: { events in
-            XCTAssertEqual(events, [
-                .next(100, [TimerViewModel(title: "공부")])
-            ])
-        })
-    }
-
-}
-
-class MockAlertFactory: AlertFactoryProtocol {
-
-    let returnString: String
-
-    init(_ returnString: String) {
-        self.returnString = returnString
-    }
-
-    func presentAlertWithTextField(_ completion: @escaping (String?) -> Void) {
-        completion(returnString)
-    }
-    
-}
-
-extension PublishRelay: ObserverType {
-
-    public func on(_ event: Event<Element>) {
-        switch event {
-        case let .next(element): accept(element)
-        case .completed, .error: fatalError()
+        context("TimerCellModel에서") {
+            context("무제한 타이머를 62초부터 생성하면") {
+                var model: TimerViewModel!
+                beforeEach {
+                    model = TimerViewModel(title: "무제한", start: 62, end: nil)
+                }
+                it("timeString은 01:02 이다.") {
+                    expect(model.timeString) == "0:01:02"
+                }
+                it("life는 live이다.") {
+                    expect(model.life) == .live
+                }
+            }
         }
     }
 
-    public func onNext(_ element: Element) {
-        accept(element)
-    }
-
-    public func onError(_ error: Error) {
-        fatalError()
-    }
-
-    public func onCompleted() {
-        fatalError()
-    }
-}
-
-extension BehaviorRelay: ObserverType {
-
-    public func on(_ event: Event<Element>) {
-        switch event {
-        case let .next(element): accept(element)
-        case .completed, .error: fatalError()
-        }
-    }
-
-    public func onNext(_ element: Element) {
-        accept(element)
-    }
-
-    public func onError(_ error: Error) {
-        fatalError()
-    }
-
-    public func onCompleted() {
-        fatalError()
-    }
 }
