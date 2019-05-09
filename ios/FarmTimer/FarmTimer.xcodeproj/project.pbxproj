@@ -15,6 +15,7 @@
 		15C907362264ABFF0099EB26 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 15C907342264ABFF0099EB26 /* LaunchScreen.storyboard */; };
 		15C907412264ABFF0099EB26 /* FarmTimerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15C907402264ABFF0099EB26 /* FarmTimerTests.swift */; };
 		15D7B7DA2284544E0048AEE0 /* TimeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15D7B7D92284544E0048AEE0 /* TimeCell.swift */; };
+		15D7B7E022845C560048AEE0 /* TimeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15D7B7DF22845C560048AEE0 /* TimeManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,7 @@
 		15C907402264ABFF0099EB26 /* FarmTimerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FarmTimerTests.swift; sourceTree = "<group>"; };
 		15C907422264ABFF0099EB26 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		15D7B7D92284544E0048AEE0 /* TimeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeCell.swift; sourceTree = "<group>"; };
+		15D7B7DF22845C560048AEE0 /* TimeManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +100,7 @@
 				15C907282264ABFE0099EB26 /* AppDelegate.swift */,
 				15C9072A2264ABFE0099EB26 /* ViewController.swift */,
 				15D7B7D92284544E0048AEE0 /* TimeCell.swift */,
+				15D7B7DF22845C560048AEE0 /* TimeManager.swift */,
 				15C9072C2264ABFE0099EB26 /* Main.storyboard */,
 				15C907342264ABFF0099EB26 /* LaunchScreen.storyboard */,
 				15C9072F2264ABFE0099EB26 /* FarmTimer.xcdatamodeld */,
@@ -228,6 +231,7 @@
 				15D7B7DA2284544E0048AEE0 /* TimeCell.swift in Sources */,
 				15C9072B2264ABFE0099EB26 /* ViewController.swift in Sources */,
 				15C907292264ABFE0099EB26 /* AppDelegate.swift in Sources */,
+				15D7B7E022845C560048AEE0 /* TimeManager.swift in Sources */,
 				15C907312264ABFE0099EB26 /* FarmTimer.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

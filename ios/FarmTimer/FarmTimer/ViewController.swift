@@ -82,6 +82,7 @@ extension ViewController {
         switch editingStyle {
         case .delete:
             let time = fetchedResult.object(at: indexPath)
+            TimeManager.shared.start(for: time)
             fetchedResult.managedObjectContext.delete(time)
         default: break
         }
@@ -91,7 +92,39 @@ extension ViewController {
         if let cell = cell as? TimeCell {
             let time = fetchedResult.object(at: indexPath)
             cell.textLabel?.text = time.label
-            cell.detailTextLabel?.text = time.time.description
+            cell.detailTextLabel?.text = format(from: time.time)
+        }
+    }
+
+    func format(from time: TimeInterval) -> String {
+        var timeValue = UInt64(time)
+        let seconds = timeValue % 60
+        timeValue /= 60
+        let minutes = timeValue % 60
+        timeValue /= 60
+        let hours = timeValue % 24
+        timeValue /= 24
+        var times: [String] = []
+        if timeValue > 0 {
+            times.append("\(timeValue)일")
+        }
+        if times.count > 0 || hours > 0 {
+            times.append("\(hours)시간")
+        }
+        if times.count > 0 || minutes > 0 {
+            times.append("\(minutes)분")
+        }
+        times.append("\(seconds)초")
+        return times.joined(separator: " ")
+    }
+
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        DispatchQueue.main.async {
+            tableView.deselectRow(at: indexPath, animated: true)
+            DispatchQueue.main.async {
+                let time = self.fetchedResult.object(at: indexPath)
+                TimeManager.shared.start(for: time)
+            }
         }
     }
 
