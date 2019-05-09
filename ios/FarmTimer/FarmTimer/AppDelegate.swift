@@ -17,6 +17,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication,
                      didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        if let viewController: ViewController = window?.rootViewController?.children.first as? ViewController {
+            viewController.context = persistentContainer.viewContext
+        }
         return true
     }
 
@@ -59,4 +62,3 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
 }
-

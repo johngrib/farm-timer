@@ -7,10 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		151D3CD22277EA2C00BF939B /* AddCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 151D3CD12277EA2C00BF939B /* AddCell.swift */; };
-		15431DC2226CB9BE005A4EA5 /* TimerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15431DC1226CB9BE005A4EA5 /* TimerCell.swift */; };
-		155C1546226A127C009AF04F /* TimerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 155C1545226A127C009AF04F /* TimerViewModel.swift */; };
-		155D8C322264C46E0062EE7C /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 155D8C312264C46E0062EE7C /* MainViewModel.swift */; };
 		15C907292264ABFE0099EB26 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15C907282264ABFE0099EB26 /* AppDelegate.swift */; };
 		15C9072B2264ABFE0099EB26 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15C9072A2264ABFE0099EB26 /* ViewController.swift */; };
 		15C9072E2264ABFE0099EB26 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 15C9072C2264ABFE0099EB26 /* Main.storyboard */; };
@@ -18,8 +14,7 @@
 		15C907332264ABFF0099EB26 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 15C907322264ABFF0099EB26 /* Assets.xcassets */; };
 		15C907362264ABFF0099EB26 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 15C907342264ABFF0099EB26 /* LaunchScreen.storyboard */; };
 		15C907412264ABFF0099EB26 /* FarmTimerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15C907402264ABFF0099EB26 /* FarmTimerTests.swift */; };
-		E1D78B04129EEA85811B1058 /* Pods_FarmTimer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 26306453BAE48955E365824A /* Pods_FarmTimer.framework */; };
-		EB0BD0E0A237134713BF6978 /* Pods_FarmTimerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 23E10F0BEDD661C3FEE8D484 /* Pods_FarmTimerTests.framework */; };
+		15D7B7DA2284544E0048AEE0 /* TimeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15D7B7D92284544E0048AEE0 /* TimeCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,10 +41,6 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		151D3CD12277EA2C00BF939B /* AddCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCell.swift; sourceTree = "<group>"; };
-		15431DC1226CB9BE005A4EA5 /* TimerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerCell.swift; sourceTree = "<group>"; };
-		155C1545226A127C009AF04F /* TimerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerViewModel.swift; sourceTree = "<group>"; };
-		155D8C312264C46E0062EE7C /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
 		15C907252264ABFE0099EB26 /* FarmTimer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FarmTimer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		15C907282264ABFE0099EB26 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		15C9072A2264ABFE0099EB26 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -61,12 +52,7 @@
 		15C9073C2264ABFF0099EB26 /* FarmTimerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FarmTimerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		15C907402264ABFF0099EB26 /* FarmTimerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FarmTimerTests.swift; sourceTree = "<group>"; };
 		15C907422264ABFF0099EB26 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		23E10F0BEDD661C3FEE8D484 /* Pods_FarmTimerTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FarmTimerTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		26306453BAE48955E365824A /* Pods_FarmTimer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FarmTimer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		3565DD5CC4F81B6C89A1AD07 /* Pods-FarmTimerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FarmTimerTests.release.xcconfig"; path = "Target Support Files/Pods-FarmTimerTests/Pods-FarmTimerTests.release.xcconfig"; sourceTree = "<group>"; };
-		7A234C4B1701C1D87C8C1B6D /* Pods-FarmTimer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FarmTimer.release.xcconfig"; path = "Target Support Files/Pods-FarmTimer/Pods-FarmTimer.release.xcconfig"; sourceTree = "<group>"; };
-		7CA7007A2A7764602481E1EC /* Pods-FarmTimerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FarmTimerTests.debug.xcconfig"; path = "Target Support Files/Pods-FarmTimerTests/Pods-FarmTimerTests.debug.xcconfig"; sourceTree = "<group>"; };
-		B15D749B2BCCFB1AEFBF20B8 /* Pods-FarmTimer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FarmTimer.debug.xcconfig"; path = "Target Support Files/Pods-FarmTimer/Pods-FarmTimer.debug.xcconfig"; sourceTree = "<group>"; };
+		15D7B7D92284544E0048AEE0 /* TimeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,7 +60,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E1D78B04129EEA85811B1058 /* Pods_FarmTimer.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -82,38 +67,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EB0BD0E0A237134713BF6978 /* Pods_FarmTimerTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		151D3CD02277EA2400BF939B /* Add */ = {
-			isa = PBXGroup;
-			children = (
-				151D3CD12277EA2C00BF939B /* AddCell.swift */,
-			);
-			path = Add;
-			sourceTree = "<group>";
-		};
-		155C1544226A1273009AF04F /* Timer */ = {
-			isa = PBXGroup;
-			children = (
-				155C1545226A127C009AF04F /* TimerViewModel.swift */,
-				15431DC1226CB9BE005A4EA5 /* TimerCell.swift */,
-			);
-			path = Timer;
-			sourceTree = "<group>";
-		};
-		155D8C302264C4610062EE7C /* Main */ = {
-			isa = PBXGroup;
-			children = (
-				155D8C312264C46E0062EE7C /* MainViewModel.swift */,
-			);
-			path = Main;
-			sourceTree = "<group>";
-		};
 		15C9071C2264ABFE0099EB26 = {
 			isa = PBXGroup;
 			children = (
@@ -121,7 +80,6 @@
 				15C9073F2264ABFF0099EB26 /* FarmTimerTests */,
 				15C907262264ABFE0099EB26 /* Products */,
 				95AD413222C9AA56C27FCD0D /* Pods */,
-				CE20CD8BE1B82658C041539A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -137,16 +95,14 @@
 		15C907272264ABFE0099EB26 /* FarmTimer */ = {
 			isa = PBXGroup;
 			children = (
-				151D3CD02277EA2400BF939B /* Add */,
-				155C1544226A1273009AF04F /* Timer */,
-				155D8C302264C4610062EE7C /* Main */,
 				15C907282264ABFE0099EB26 /* AppDelegate.swift */,
 				15C9072A2264ABFE0099EB26 /* ViewController.swift */,
+				15D7B7D92284544E0048AEE0 /* TimeCell.swift */,
 				15C9072C2264ABFE0099EB26 /* Main.storyboard */,
-				15C907322264ABFF0099EB26 /* Assets.xcassets */,
 				15C907342264ABFF0099EB26 /* LaunchScreen.storyboard */,
-				15C907372264ABFF0099EB26 /* Info.plist */,
 				15C9072F2264ABFE0099EB26 /* FarmTimer.xcdatamodeld */,
+				15C907372264ABFF0099EB26 /* Info.plist */,
+				15C907322264ABFF0099EB26 /* Assets.xcassets */,
 			);
 			path = FarmTimer;
 			sourceTree = "<group>";
@@ -163,21 +119,8 @@
 		95AD413222C9AA56C27FCD0D /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				B15D749B2BCCFB1AEFBF20B8 /* Pods-FarmTimer.debug.xcconfig */,
-				7A234C4B1701C1D87C8C1B6D /* Pods-FarmTimer.release.xcconfig */,
-				7CA7007A2A7764602481E1EC /* Pods-FarmTimerTests.debug.xcconfig */,
-				3565DD5CC4F81B6C89A1AD07 /* Pods-FarmTimerTests.release.xcconfig */,
 			);
 			path = Pods;
-			sourceTree = "<group>";
-		};
-		CE20CD8BE1B82658C041539A /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				26306453BAE48955E365824A /* Pods_FarmTimer.framework */,
-				23E10F0BEDD661C3FEE8D484 /* Pods_FarmTimerTests.framework */,
-			);
-			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -187,12 +130,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 15C907452264ABFF0099EB26 /* Build configuration list for PBXNativeTarget "FarmTimer" */;
 			buildPhases = (
-				D6FC1A54B4280F440D9FF4C6 /* [CP] Check Pods Manifest.lock */,
 				15C907212264ABFE0099EB26 /* Sources */,
 				15C907222264ABFE0099EB26 /* Frameworks */,
 				15C907232264ABFE0099EB26 /* Resources */,
-				E3E1BB7F5110D10D7358267B /* [CP] Embed Pods Frameworks */,
-				15C9074B2264B0550099EB26 /* ShellScript */,
 				15E25C66226B7C3D0096FD41 /* Embed Frameworks */,
 			);
 			buildRules = (
@@ -208,11 +148,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 15C907482264ABFF0099EB26 /* Build configuration list for PBXNativeTarget "FarmTimerTests" */;
 			buildPhases = (
-				EB7AAE23CCE9B8F01D805FCE /* [CP] Check Pods Manifest.lock */,
 				15C907382264ABFF0099EB26 /* Sources */,
 				15C907392264ABFF0099EB26 /* Frameworks */,
 				15C9073A2264ABFF0099EB26 /* Resources */,
-				55E83422C29B0E10EA0761B2 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -282,144 +220,15 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
-/* Begin PBXShellScriptBuildPhase section */
-		15C9074B2264B0550099EB26 /* ShellScript */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-			);
-			outputFileListPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "if which \"${PODS_ROOT}/SwiftLint/swiftlint\" >/dev/null; then\n    \"${PODS_ROOT}/SwiftLint/swiftlint\"\nelse\n    echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
-		};
-		55E83422C29B0E10EA0761B2 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-FarmTimerTests/Pods-FarmTimerTests-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
-				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
-				"${BUILT_PRODUCTS_DIR}/Nimble/Nimble.framework",
-				"${BUILT_PRODUCTS_DIR}/Quick/Quick.framework",
-				"${BUILT_PRODUCTS_DIR}/RxBlocking/RxBlocking.framework",
-				"${BUILT_PRODUCTS_DIR}/RxExpect/RxExpect.framework",
-				"${BUILT_PRODUCTS_DIR}/RxTest/RxTest.framework",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Nimble.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Quick.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxBlocking.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxExpect.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxTest.framework",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-FarmTimerTests/Pods-FarmTimerTests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		D6FC1A54B4280F440D9FF4C6 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-FarmTimer-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		E3E1BB7F5110D10D7358267B /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-FarmTimer/Pods-FarmTimer-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/Action/Action.framework",
-				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
-				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
-				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Action.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-FarmTimer/Pods-FarmTimer-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		EB7AAE23CCE9B8F01D805FCE /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-FarmTimerTests-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-/* End PBXShellScriptBuildPhase section */
-
 /* Begin PBXSourcesBuildPhase section */
 		15C907212264ABFE0099EB26 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				155C1546226A127C009AF04F /* TimerViewModel.swift in Sources */,
-				155D8C322264C46E0062EE7C /* MainViewModel.swift in Sources */,
+				15D7B7DA2284544E0048AEE0 /* TimeCell.swift in Sources */,
 				15C9072B2264ABFE0099EB26 /* ViewController.swift in Sources */,
 				15C907292264ABFE0099EB26 /* AppDelegate.swift in Sources */,
 				15C907312264ABFE0099EB26 /* FarmTimer.xcdatamodeld in Sources */,
-				151D3CD22277EA2C00BF939B /* AddCell.swift in Sources */,
-				15431DC2226CB9BE005A4EA5 /* TimerCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -579,7 +388,6 @@
 		};
 		15C907462264ABFF0099EB26 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B15D749B2BCCFB1AEFBF20B8 /* Pods-FarmTimer.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -599,7 +407,6 @@
 		};
 		15C907472264ABFF0099EB26 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7A234C4B1701C1D87C8C1B6D /* Pods-FarmTimer.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -619,7 +426,6 @@
 		};
 		15C907492264ABFF0099EB26 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7CA7007A2A7764602481E1EC /* Pods-FarmTimerTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -641,7 +447,6 @@
 		};
 		15C9074A2264ABFF0099EB26 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3565DD5CC4F81B6C89A1AD07 /* Pods-FarmTimerTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";

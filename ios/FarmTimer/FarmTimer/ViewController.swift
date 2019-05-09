@@ -7,70 +7,76 @@
 //
 
 import UIKit
+import CoreData
 
-class ViewController: UICollectionViewController {
+class ViewController: UITableViewController {
 
-    lazy var viewModel = MainViewModel()
+    var context: NSManagedObjectContext!
+
+    lazy var fetchRequest: NSFetchRequest<Time> = Time.fetchRequest()
+    lazy var fetchedResult: NSFetchedResultsController = NSFetchedResultsController(fetchRequest: self.fetchRequest, managedObjectContext: self.context, sectionNameKeyPath: nil, cacheName: "com.rollmind.farmtimer.times")
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
 
-        viewModel.refresh {
-            self.collectionView.reloadData()
-        }
+        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addTime(_:)))
+
+        fetchedResult.delegate = self
+        try! fetchedResult.performFetch()
     }
 
 }
 
 extension ViewController {
 
-    override func numberOfSections(in collectionView: UICollectionView) -> Int {
-        return 1
-    }
-
-    override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return viewModel.count + 1
-    }
-
-    override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        if indexPath.row == viewModel.count {
-            return collectionView.dequeueReusableCell(withReuseIdentifier: "Add", for: indexPath)
+    @objc func addTime(_ sender: Any) {
+        let alert = UIAlertController(title: "Add Time", message: nil, preferredStyle: .actionSheet)
+        alert.addTextField { textField in
+            textField.placeholder = "Insert timer label"
         }
-        return collectionView.dequeueReusableCell(withReuseIdentifier: "Timer", for: indexPath)
+        alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
+        alert.addAction(UIAlertAction(title: "Add", style: .default, handler: { _ in
+            self.addTime(title: alert.textFields?[0].text)
+        }))
+    }
+
+    func addTime(title: String?) {
+        guard let title = title else { return }
+        let time = Time(context: context)
+        time.label = title
+        time.time = 0
+        context.insert(time)
     }
 
 }
 
 extension ViewController {
 
-    override func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
-        if let cell = cell as? TimerCell {
-            cell.model = viewModel.timers[indexPath.row]
-        }
+    override func numberOfSections(in tableView: UITableView) -> Int {
+        return fetchedResult.sections?.count ?? 0
     }
 
-    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        if indexPath.row == viewModel.count {
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return fetchedResult.sections?[section].numberOfObjects ?? 0
+    }
 
-            viewModel.add(Int.random(in: 0..<10).description)
-            collectionView.reloadData()
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        return tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
+    }
 
-        } else {
-            viewModel.timers[indexPath.row].toggle()
+    override func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        if let cell = cell as? TimeCell {
+            let time = fetchedResult.object(at: indexPath)
+            cell.textLabel?.text = time.label
+            cell.detailTextLabel?.text = time.time.description
         }
     }
 
 }
 
-extension ViewController: UICollectionViewDelegateFlowLayout {
+extension ViewController: NSFetchedResultsControllerDelegate {
 
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return collectionView.bounds.size
-    }
 
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
-        return 0
-    }
 
 }
