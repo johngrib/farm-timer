@@ -24,6 +24,8 @@ class ViewController: UITableViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
 
+        title = "Farm Timer"
+
         navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addTime(_:)))
 
         fetchedResult.delegate = self
