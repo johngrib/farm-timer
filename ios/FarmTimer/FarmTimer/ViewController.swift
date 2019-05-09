@@ -8,6 +8,7 @@
 
 import UIKit
 import CoreData
+import CoreServices
 
 class ViewController: UITableViewController {
 
@@ -30,9 +31,12 @@ class ViewController: UITableViewController {
 
         fetchedResult.delegate = self
         try! fetchedResult.performFetch()
-
         tableView.tableFooterView = UIView()
         tableView.reloadData()
+
+        tableView.dragDelegate = self
+        tableView.dropDelegate = self
+        tableView.dragInteractionEnabled = true
     }
 
 }
@@ -140,6 +144,9 @@ extension ViewController {
         }
     }
 
+    override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
+        return true
+    }
 }
 
 extension ViewController: NSFetchedResultsControllerDelegate {
@@ -169,4 +176,54 @@ extension ViewController: NSFetchedResultsControllerDelegate {
         tableView.endUpdates()
     }
 
+}
+
+extension ViewController: UITableViewDragDelegate {
+    func tableView(_ tableView: UITableView, itemsForBeginning session: UIDragSession, at indexPath: IndexPath) -> [UIDragItem] {
+        let item = NSItemProvider()
+        let data = try! JSONEncoder().encode(indexPath)
+        item.registerDataRepresentation(forTypeIdentifier: kUTTypeData as String, visibility: .all) { (completion) in
+            completion(data, nil)
+            return nil
+        }
+        return [UIDragItem(itemProvider: item)]
+    }
+}
+
+extension ViewController: UITableViewDropDelegate {
+
+    func tableView(_ tableView: UITableView, canHandle session: UIDropSession) -> Bool {
+        return true
+    }
+
+    func tableView(_ tableView: UITableView, performDropWith coordinator: UITableViewDropCoordinator) {
+        guard let destination = coordinator.destinationIndexPath else { return }
+        coordinator.items.first?.dragItem.itemProvider.loadDataRepresentation(forTypeIdentifier: kUTTypeData as String, completionHandler: { (data, _) in
+            let indexPath = try! JSONDecoder().decode(IndexPath.self, from: data!)
+            self.fetchedResult.delegate = nil
+            self.context.performAndWait {
+                let from = self.fetchedResult.object(at: indexPath)
+                let to = self.fetchedResult.object(at: destination)
+                let date = to.createdate
+                to.createdate = from.createdate
+                from.createdate = date
+                self.fetchedResult.delegate = self
+                try! self.fetchedResult.performFetch()
+            }
+        })
+    }
+
+
+    func tableView(_ tableView: UITableView, dropSessionDidUpdate session: UIDropSession, withDestinationIndexPath destinationIndexPath: IndexPath?) -> UITableViewDropProposal {
+        // The .move operation is available only for dragging within a single app.
+        if tableView.hasActiveDrag {
+            if session.items.count > 1 {
+                return UITableViewDropProposal(operation: .cancel)
+            } else {
+                return UITableViewDropProposal(operation: .move, intent: .insertAtDestinationIndexPath)
+            }
+        } else {
+            return UITableViewDropProposal(operation: .copy, intent: .insertAtDestinationIndexPath)
+        }
+    }
 }
