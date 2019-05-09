@@ -80,14 +80,24 @@ extension ViewController {
         return true
     }
 
-    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
-        switch editingStyle {
-        case .delete:
-            let time = fetchedResult.object(at: indexPath)
-            TimeManager.shared.start(for: time)
-            fetchedResult.managedObjectContext.delete(time)
-        default: break
-        }
+    override func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
+        return [
+            UITableViewRowAction(style: .destructive, title: "delete", handler: { (_, indexPath) in
+                let time = self.fetchedResult.object(at: indexPath)
+                TimeManager.shared.stop(for: time)
+                self.fetchedResult.managedObjectContext.delete(time)
+            }),
+            UITableViewRowAction(style: .normal, title: "reset", handler: { (_, indexPath) in
+                let time = self.fetchedResult.object(at: indexPath)
+                TimeManager.shared.stop(for: time)
+                time.time = 0
+            })
+        ]
+    }
+
+    override func tableView(_ tableView: UITableView, willBeginEditingRowAt indexPath: IndexPath) {
+        let time = self.fetchedResult.object(at: indexPath)
+        TimeManager.shared.stop(for: time)
     }
 
     override func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
