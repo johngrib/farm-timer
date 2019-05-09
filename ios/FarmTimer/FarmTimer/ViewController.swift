@@ -180,6 +180,8 @@ extension ViewController: NSFetchedResultsControllerDelegate {
 
 extension ViewController: UITableViewDragDelegate {
     func tableView(_ tableView: UITableView, itemsForBeginning session: UIDragSession, at indexPath: IndexPath) -> [UIDragItem] {
+        let time = fetchedResult.object(at: indexPath)
+        TimeManager.shared.stop()
         let item = NSItemProvider()
         let data = try! JSONEncoder().encode(indexPath)
         item.registerDataRepresentation(forTypeIdentifier: kUTTypeData as String, visibility: .all) { (completion) in

@@ -37,7 +37,13 @@ final class TimeManager {
         self.timer = timer
     }
 
-    func stop(for time: Time) {
+    func stop(for time: Time? = nil) {
+        guard let time = time else {
+            self.timer?.invalidate()
+            self.timer = nil
+            self.time = nil
+            return
+        }
         if self.time?.isEqual(time) == true, self.timer?.isValid == true {
             self.timer?.invalidate()
             self.timer = nil
