@@ -33,7 +33,7 @@ final class TimeManager {
             return
         }
         self.time = time
-        let timer = Timer.scheduledTimer(timeInterval: 0.01, target: self, selector: #selector(increament), userInfo: self, repeats: true)
+        let timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(increament), userInfo: self, repeats: true)
         self.timer = timer
     }
 
