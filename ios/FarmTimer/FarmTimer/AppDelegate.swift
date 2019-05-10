@@ -23,6 +23,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         return true
     }
 
+    func applicationDidEnterBackground(_ application: UIApplication) {
+        self.saveContext()
+    }
+
     func applicationWillTerminate(_ application: UIApplication) {
         self.saveContext()
     }
