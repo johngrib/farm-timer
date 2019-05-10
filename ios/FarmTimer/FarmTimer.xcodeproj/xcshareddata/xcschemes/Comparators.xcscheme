@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "15C907242264ABFE0099EB26"
-               BuildableName = "FarmTimer.app"
-               BlueprintName = "FarmTimer"
+               BlueprintIdentifier = "15E25C49226B7C3D0096FD41"
+               BuildableName = "Comparators.framework"
+               BlueprintName = "Comparators"
                ReferencedContainer = "container:FarmTimer.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -32,16 +32,6 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "15C9073B2264ABFF0099EB26"
-               BuildableName = "FarmTimerTests.xctest"
-               BlueprintName = "FarmTimerTests"
-               ReferencedContainer = "container:FarmTimer.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
                BlueprintIdentifier = "15E25C51226B7C3D0096FD41"
                BuildableName = "ComparatorsTests.xctest"
                BlueprintName = "ComparatorsTests"
@@ -52,9 +42,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "15C907242264ABFE0099EB26"
-            BuildableName = "FarmTimer.app"
-            BlueprintName = "FarmTimer"
+            BlueprintIdentifier = "15E25C49226B7C3D0096FD41"
+            BuildableName = "Comparators.framework"
+            BlueprintName = "Comparators"
             ReferencedContainer = "container:FarmTimer.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -71,16 +61,15 @@
       debugDocumentVersioning = "YES"
       debugServiceExtension = "internal"
       allowLocationSimulation = "YES">
-      <BuildableProductRunnable
-         runnableDebuggingMode = "0">
+      <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "15C907242264ABFE0099EB26"
-            BuildableName = "FarmTimer.app"
-            BlueprintName = "FarmTimer"
+            BlueprintIdentifier = "15E25C49226B7C3D0096FD41"
+            BuildableName = "Comparators.framework"
+            BlueprintName = "Comparators"
             ReferencedContainer = "container:FarmTimer.xcodeproj">
          </BuildableReference>
-      </BuildableProductRunnable>
+      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </LaunchAction>
@@ -90,16 +79,15 @@
       savedToolIdentifier = ""
       useCustomWorkingDirectory = "NO"
       debugDocumentVersioning = "YES">
-      <BuildableProductRunnable
-         runnableDebuggingMode = "0">
+      <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "15C907242264ABFE0099EB26"
-            BuildableName = "FarmTimer.app"
-            BlueprintName = "FarmTimer"
+            BlueprintIdentifier = "15E25C49226B7C3D0096FD41"
+            BuildableName = "Comparators.framework"
+            BlueprintName = "Comparators"
             ReferencedContainer = "container:FarmTimer.xcodeproj">
          </BuildableReference>
-      </BuildableProductRunnable>
+      </MacroExpansion>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">
